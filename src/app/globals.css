@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --sand: #fbf6ec;
+  --sand-2: #f3e9d6;
+  --sand-3: #eadfc7;
+  --espresso: #3f2109;
+  --espresso-2: #2b1808;
+  --ink: #3a2612;
+  --muted: #7a5f42;
+  --terracotta: #a8481a;
+  --terracotta-d: #8a3a13;
+  --clay: #c56a2e;
+  --amber: #e4a23e;
+  --amber-d: #ce8a25;
+  --olive: #4b5130;
+  --line: rgba(63, 33, 9, 0.14);
+  --card: #fffdf8;
+}
+
+@theme inline {
+  --color-sand: var(--sand);
+  --color-sand-2: var(--sand-2);
+  --color-sand-3: var(--sand-3);
+  --color-espresso: var(--espresso);
+  --color-espresso-2: var(--espresso-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-d: var(--terracotta-d);
+  --color-clay: var(--clay);
+  --color-amber: var(--amber);
+  --color-amber-d: var(--amber-d);
+  --color-olive: var(--olive);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-mulish);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--sand);
+    color: var(--ink);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-fraunces), Georgia, serif;
+    color: var(--espresso);
+    line-height: 1.08;
+    font-weight: 600;
+  }
+}
+
+/* native details/summary FAQ marker */
+.faq-item summary {
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--terracotta);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: "\2013";
+}
