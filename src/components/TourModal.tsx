@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { INCLUDED, EXCLUDED, TINT, type Tour } from "@/lib/data";
+import Image from "next/image";
+import { INCLUDED, EXCLUDED, type Tour } from "@/lib/data";
 import { waLink } from "@/lib/wa";
-import SceneSvg from "./SceneSvg";
+import { pickPhoto } from "@/lib/photoPool";
 
 export default function TourModal({ tour, onClose }: { tour: Tour; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -21,7 +22,7 @@ export default function TourModal({ tour, onClose }: { tour: Tour; onClose: () =
     };
   }, [onClose]);
 
-  const tint = TINT[tour.origin] ?? TINT.Marrakech;
+  const photo = pickPhoto(tour.scene, tour.id);
 
   return (
     <div
@@ -32,8 +33,8 @@ export default function TourModal({ tour, onClose }: { tour: Tour; onClose: () =
     >
       <div className="my-[4vh] w-full max-w-[720px] overflow-hidden rounded-3xl bg-card shadow-2xl">
         <div className="relative">
-          <div className="aspect-[16/7] w-full">
-            <SceneSvg scene={tour.scene} tint={tint} uid={`modal-${tour.id}`} />
+          <div className="relative aspect-[16/7] w-full">
+            <Image src={photo.src} alt={photo.alt} fill sizes="720px" className="object-cover" priority />
           </div>
           <button
             ref={closeRef}

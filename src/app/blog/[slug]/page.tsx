@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BLOG, getPost, getRelatedPosts } from "@/lib/blog";
-import { TINT } from "@/lib/data";
-import SceneSvg from "@/components/SceneSvg";
+import { pickPhoto } from "@/lib/photoPool";
 import BlogBlocks from "@/components/BlogBlocks";
 import BlogCard from "@/components/BlogCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -51,7 +51,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const related = getRelatedPosts(post);
-  const tint = TINT[post.origin] ?? TINT.Marrakech;
+  const photo = pickPhoto(post.scene, post.slug);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -96,8 +96,8 @@ export default async function BlogPostPage({
         </div>
       </div>
 
-      <div className="aspect-[21/9] w-full">
-        <SceneSvg scene={post.scene} tint={tint} uid={`blogpost-${post.slug}`} />
+      <div className="relative aspect-[21/9] w-full">
+        <Image src={photo.src} alt={photo.alt} fill sizes="100vw" priority className="object-cover" />
       </div>
 
       <div className="mx-auto max-w-[820px] px-[clamp(18px,4vw,40px)] py-[clamp(40px,6vw,64px)]">

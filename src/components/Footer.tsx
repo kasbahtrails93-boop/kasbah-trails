@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CONTACT } from "@/lib/data";
 import { waLink } from "@/lib/wa";
+import Logo from "./Logo";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +10,10 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-14">
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <p className="mb-3 font-serif text-xl font-semibold text-white">Kasbah Trails</p>
+            <div className="mb-3 flex items-center gap-2.5">
+              <Logo className="h-8 w-8 shrink-0" onDarkBg />
+              <p className="font-serif text-xl font-semibold text-white">Kasbah Trails</p>
+            </div>
             <p className="max-w-[34ch] text-sm text-sand/70">
               Private, tailor-made Morocco tours guided by locals — the Sahara, the imperial cities
               and the Atlas, at your own pace.

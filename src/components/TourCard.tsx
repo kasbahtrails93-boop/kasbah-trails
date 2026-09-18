@@ -1,14 +1,22 @@
-import { TINT, type Tour } from "@/lib/data";
+import Image from "next/image";
+import type { Tour } from "@/lib/data";
 import { waLink } from "@/lib/wa";
-import SceneSvg from "./SceneSvg";
+import { pickPhoto } from "@/lib/photoPool";
 
 export default function TourCard({ tour, onOpen }: { tour: Tour; onOpen: (id: string) => void }) {
-  const tint = TINT[tour.origin] ?? TINT.Marrakech;
+  const photo = pickPhoto(tour.scene, tour.id);
 
   return (
     <article className="overflow-hidden rounded-2xl border border-line bg-card shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
       <div className="relative aspect-[16/10]">
-        <SceneSvg scene={tour.scene} tint={tint} uid={tour.id} />
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
         <div className="absolute left-3 top-3 flex gap-2">
           <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-espresso">
             {tour.days} days

@@ -105,21 +105,6 @@ export default function HeroSlider() {
             Message us on WhatsApp
           </a>
         </div>
-
-        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/20 pt-6 text-sm text-white/80">
-          <span className="inline-flex items-baseline gap-2">
-            <b className="font-serif text-lg font-semibold text-white">33</b>
-            private itineraries, 3 to 15 days
-          </span>
-          <span className="inline-flex items-baseline gap-2">
-            <b className="font-serif text-lg font-semibold text-white">100%</b>
-            private departures, no strangers added
-          </span>
-          <span className="inline-flex items-baseline gap-2">
-            <b className="font-serif text-lg font-semibold text-white">4</b>
-            start cities — Marrakech, Fes, Casablanca, Tangier
-          </span>
-        </div>
       </div>
 
       {/* slide indicators */}

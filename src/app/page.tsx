@@ -1,4 +1,5 @@
 import HeroSlider from "@/components/HeroSlider";
+import TrustStrip from "@/components/TrustStrip";
 import FeaturedTours from "@/components/FeaturedTours";
 import Process from "@/components/Process";
 import Why from "@/components/Why";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <TrustStrip />
       <FeaturedTours />
       <Process />
       <Why />
