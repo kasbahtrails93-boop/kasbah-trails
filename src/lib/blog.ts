@@ -9,6 +9,10 @@ export type BlogBlock =
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Shorter variant for the <title> tag when `title` runs long enough to
+   * get truncated in search results once " | Kasbah Trails" is appended.
+   * Falls back to `title` when omitted. The on-page H1 always uses `title`. */
+  metaTitle?: string;
   description: string;
   keyword: string;
   scene: "dunes" | "medina" | "coast";
@@ -24,6 +28,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "how-many-days-in-morocco",
     title: "How Many Days Do You Need in Morocco? A Realistic Itinerary Guide",
+    metaTitle: "How Many Days Do You Need in Morocco?",
     description:
       "From a 3-day dash to the Sahara to a full 15-day loop of the country — how many days in Morocco you actually need, by travel style and priority.",
     keyword: "how many days in Morocco",
@@ -32,7 +37,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-09-18",
     readMins: 7,
     intro:
-      "It's the first question almost every traveller asks, and the honest answer is: it depends what you're prioritising. Morocco is bigger and more varied than its size on a map suggests — a week covers the highlights, but the country rewards a slower pace if you have it.",
+      "It's the first question almost every traveller asks, and the answer depends on what you're prioritising. Morocco is bigger and more varied than its size on a map suggests — a week covers the highlights, but the country rewards a slower pace if you have it.",
     blocks: [
       {
         type: "h2",
@@ -40,7 +45,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "If you only have a long weekend, don't try to cover the whole country — pick one loop and do it well. The classic move is a [3-day Sahara desert tour from Marrakech](/tours/3-mar): over the High Atlas, a night at a desert camp under Erg Chebbi's dunes, and back. It's tight but genuinely satisfying, not just a box-ticking exercise.",
+        text: "If you only have a long weekend, don't try to cover the whole country — pick one loop and do it well. The classic move is a [3-day Sahara desert tour from Marrakech](/tours/3-mar): over the High Atlas, a night at a desert camp under Erg Chebbi's dunes, and back. It's tight, but the pace still leaves room to enjoy each stop rather than just ticking it off.",
       },
       {
         type: "h2",
@@ -68,7 +73,7 @@ export const BLOG: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Whatever length you're working with, the number of days matters less than how many places you try to cram into them. According to [Morocco's National Tourist Office](https://www.visitmorocco.com/en), the country's regions are genuinely distinct — the Rif, the Atlas, the Sahara and the Atlantic coast don't feel like variations on a theme, they feel like different countries. Budget driving time accordingly rather than trying to see everything on one trip.",
+        text: "Whatever length you're working with, the number of days matters less than how many places you try to cram into them. According to [Morocco's National Tourist Office](https://www.visitmorocco.com/en), the country's regions don't blur into each other. The Rif, the Atlas, the Sahara and the Atlantic coast feel less like variations on a theme and more like different countries entirely. Budget driving time accordingly rather than trying to see everything on one trip.",
       },
     ],
     related: ["7-days-in-morocco-itinerary", "private-driver-vs-group-tour-morocco", "how-much-does-private-morocco-tour-cost"],
@@ -76,6 +81,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "best-time-to-visit-sahara-desert-morocco",
     title: "Best Time to Visit the Sahara Desert in Morocco (Month by Month)",
+    metaTitle: "Best Time to Visit the Sahara Desert in Morocco",
     description:
       "When to go to the Erg Chebbi dunes near Merzouga — temperatures, crowds and what a desert camp night actually feels like in each season.",
     keyword: "best time to visit Sahara desert Morocco",
@@ -92,7 +98,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Spring gives you warm, comfortable days in the dunes and nights that are cool but manageable in a proper desert camp with blankets. It's also when the High Atlas passes — including the [Tizi n'Tichka](/blog/tizi-n-tichka-pass-guide) you'll cross to get there — are clear of snow. This is the season we get the most repeat questions about camel trek timing, since sunset rides are genuinely pleasant rather than a race to get out of the heat.",
+        text: "Spring gives you warm, comfortable days in the dunes and nights that are cool but manageable in a proper desert camp with blankets. It's also when the High Atlas passes — including the [Tizi n'Tichka](/blog/tizi-n-tichka-pass-guide) you'll cross to get there — are clear of snow. This is the season we get the most repeat questions about camel trek timing, since sunset rides are pleasant rather than a race to get out of the heat.",
       },
       {
         type: "h2",
@@ -100,7 +106,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Merzouga regularly hits 40°C+ in midsummer, and the dunes at midday are genuinely punishing. It's still workable if you plan around it: camel treks happen in the cooler evening, and a desert camp night still cools down noticeably once the sun's gone. If you're set on summer travel, consider our shorter [3-day desert tours](/tours?len=1-3) over longer ones, so you're spending less total time in peak heat.",
+        text: "Merzouga regularly hits 40°C+ in midsummer, and the dunes at midday are brutal. It's still workable if you plan around it — camel treks happen in the cooler evening, and a desert camp night still cools down noticeably once the sun's gone. If you're set on summer travel, consider our shorter [3-day desert tours](/tours?len=1-3) over longer ones, so you're spending less total time in peak heat.",
       },
       {
         type: "h2",
@@ -116,7 +122,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Winter days in the desert are often pleasantly mild, but nights at a Sahara camp can drop close to freezing. This is genuinely one of the best times for stargazing, since the same clear, dry air that lets the temperature drop also means minimal cloud cover — but pack real layers, not just a light jacket. See our [Morocco in winter guide](/blog/morocco-in-winter-what-to-expect) for exactly what to bring.",
+        text: "Winter days in the desert are often pleasantly mild, but nights at a Sahara camp can drop close to freezing. It's one of the best times of year for stargazing: the same clear, dry air that lets the temperature drop also means minimal cloud cover. Pack real layers, though, not just a light jacket. See our [Morocco in winter guide](/blog/morocco-in-winter-what-to-expect) for exactly what to bring.",
       },
       {
         type: "p",
@@ -128,6 +134,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "marrakech-to-sahara-desert-guide",
     title: "Marrakech to Sahara Desert: How to Get There and What to Expect",
+    metaTitle: "Marrakech to Sahara Desert: How to Get There",
     description:
       "The real route from Marrakech to the Erg Chebbi dunes — the Tizi n'Tichka pass, Aït Ben Haddou, the gorges, and how long the drive actually takes.",
     keyword: "Marrakech to Sahara desert",
@@ -180,15 +187,16 @@ export const BLOG: BlogPost[] = [
   {
     slug: "is-chefchaouen-worth-visiting",
     title: "Is Chefchaouen Worth Visiting? What the Blue City Is Really Like",
+    metaTitle: "Is Chefchaouen Worth Visiting?",
     description:
-      "Honest notes on Chefchaouen beyond the Instagram photos — how blue it actually is, how long to spend there, and how to fit it into a Morocco route.",
+      "A clear-eyed look at Chefchaouen beyond the Instagram photos — how blue it really is, how long to spend there, and how to fit it into a Morocco route.",
     keyword: "is Chefchaouen worth visiting",
     scene: "medina",
     origin: "Tangier",
     date: "2026-09-05",
     readMins: 5,
     intro:
-      "Chefchaouen shows up on every Morocco itinerary photo, which makes some travellers suspicious it's overhyped. Having driven through it more times than we can count, here's the honest version.",
+      "Chefchaouen shows up on every Morocco itinerary photo, which makes some travellers suspicious it's overhyped. Having driven through it more times than we can count, here's what it's actually like.",
     blocks: [
       {
         type: "h2",
@@ -196,7 +204,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "The blue-washed walls aren't limited to one photogenic street — they extend through most of the old medina, in a range from pale sky-blue to deep cobalt depending on the building and how recently it's been repainted. It photographs well because it genuinely looks like that in person, not because of a filter.",
+        text: "The blue-washed walls aren't limited to one photogenic street — they extend through most of the old medina, in a range from pale sky-blue to deep cobalt depending on the building and how recently it's been repainted. It photographs well because it looks like that in person — no filter involved.",
       },
       {
         type: "h2",
@@ -216,11 +224,11 @@ export const BLOG: BlogPost[] = [
       },
       {
         type: "h2",
-        text: "The verdict",
+        text: "So, is it worth it?",
         },
       {
         type: "p",
-        text: "Worth it, with a caveat: go for the walk through the medina itself, not just the one famous staircase. The quieter residential lanes above the main square are just as blue and considerably less crowded. If your trip already routes through the north, there's no real reason to skip it.",
+        text: "Yes, with one caveat: don't stop at the one famous staircase. Walk the quieter residential lanes above the main square instead — they're just as blue and hold a fraction of the crowd. If your trip already routes through the north, there's no real reason to skip it.",
       },
     ],
     related: ["morocco-itinerary-from-tangier", "todgha-gorge-vs-dades-gorge", "morocco-in-winter-what-to-expect"],
@@ -320,7 +328,7 @@ export const BLOG: BlogPost[] = [
       },
       {
         type: "p",
-        text: "If your route also crosses the High Atlas beforehand, layer for the mountain pass too — the [Tizi n'Tichka](/blog/tizi-n-tichka-pass-guide) can be genuinely cold even when Merzouga itself is warm.",
+        text: "If your route also crosses the High Atlas beforehand, layer for the mountain pass too — the [Tizi n'Tichka](/blog/tizi-n-tichka-pass-guide) can be properly cold even when Merzouga itself is warm.",
       },
     ],
     related: ["best-time-to-visit-sahara-desert-morocco", "camel-trekking-merzouga-what-to-expect", "morocco-in-winter-what-to-expect"],
@@ -328,6 +336,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "fes-vs-marrakech",
     title: "Fes vs Marrakech: Which Imperial City Should You Visit First?",
+    metaTitle: "Fes vs Marrakech: Which Should You Visit First?",
     description:
       "Comparing Fes and Marrakech for a Morocco trip — medina size, atmosphere, day trips, and which one to prioritise if you can only pick one.",
     keyword: "Fes vs Marrakech",
@@ -336,7 +345,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-08-21",
     readMins: 6,
     intro:
-      "Both are imperial cities with major medinas, but they feel genuinely different to walk through. If your itinerary only has room for one, here's how to decide.",
+      "Both are imperial cities with major medinas, but walking through them feels nothing alike. If your itinerary only has room for one, here's how to decide.",
     blocks: [
       {
         type: "h2",
@@ -376,6 +385,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "how-much-does-private-morocco-tour-cost",
     title: "How Much Does a Private Morocco Tour Cost? A Realistic Budget Breakdown",
+    metaTitle: "How Much Does a Private Morocco Tour Cost?",
     description:
       "What actually drives the price of a private Morocco tour — vehicle, driver-guide, accommodation level, season and group size — and how quoting works.",
     keyword: "how much does a private Morocco tour cost",
@@ -384,7 +394,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-08-16",
     readMins: 6,
     intro:
-      "There's no single published price for a private Morocco tour, because the honest answer depends on several variables that change the quote more than the headline number of days does.",
+      "There's no single published price for a private Morocco tour, because several variables move the quote more than the headline number of days does.",
     blocks: [
       {
         type: "h2",
@@ -422,7 +432,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Because those four variables genuinely change the honest number — a flat published rate either overcharges small groups in low season or undercharges large groups in peak season. Message us on [WhatsApp](/#contact) with your dates and traveller count and we'll send back a real, itemised quote, not a starting-from teaser.",
+        text: "Those four variables move the real number enough that a flat published rate would either overcharge small groups in low season or undercharge large groups in peak season. Message us on [WhatsApp](/#contact) with your dates and traveller count and we'll send back a real, itemised quote, not a starting-from teaser.",
       },
     ],
     related: ["private-driver-vs-group-tour-morocco", "riad-vs-hotel-morocco", "how-many-days-in-morocco"],
@@ -430,6 +440,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "camel-trekking-merzouga-what-to-expect",
     title: "Camel Trekking in Merzouga: What Actually Happens on a Desert Camp Night",
+    metaTitle: "Camel Trekking in Merzouga: What to Expect",
     description:
       "A walk-through of what a Merzouga camel trek and Sahara desert camp night actually involve, from sunset ride to sunrise over the dunes.",
     keyword: "camel trekking Merzouga",
@@ -454,7 +465,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Desert camps range from simple shared Berber tents to more comfortable private setups with real beds, depending on which [tour](/tours) you've booked. Either way, expect a communal dinner, often with live drumming, and genuinely dark skies once the sun's fully down — Merzouga's remoteness means minimal light pollution.",
+        text: "Desert camps range from simple shared Berber tents to more comfortable private setups with real beds, depending on which [tour](/tours) you've booked. Either way, expect a communal dinner, often with live drumming, and properly dark skies once the sun's fully down, since Merzouga's remoteness keeps light pollution to a minimum.",
       },
       {
         type: "h2",
@@ -470,7 +481,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Most itineraries have you up before dawn to watch the sunrise from the dunes directly above camp — genuinely worth the early alarm. Some routes include a second night and a 4x4 excursion the following day, like our [4-day Marrakech desert tour](/tours/4-mar) with its added off-road day and nomad family visit, rather than heading straight back after one night.",
+        text: "Most itineraries have you up before dawn to watch the sunrise from the dunes directly above camp, worth the early alarm on its own. Some routes include a second night and a 4x4 excursion the following day, like our [4-day Marrakech desert tour](/tours/4-mar) with its added off-road day and nomad family visit, rather than heading straight back after one night.",
       },
     ],
     related: ["what-to-pack-sahara-desert-tour", "best-time-to-visit-sahara-desert-morocco", "marrakech-to-sahara-desert-guide"],
@@ -479,7 +490,7 @@ export const BLOG: BlogPost[] = [
     slug: "is-morocco-safe-solo-female-travelers",
     title: "Is Morocco Safe for Solo Female Travelers? An Honest Guide",
     description:
-      "A practical, honest look at solo female travel in Morocco — what to actually expect, what helps, and why a private driver-guide changes the experience.",
+      "A practical look at solo female travel in Morocco — what to expect, what helps, and why a private driver-guide changes the experience.",
     keyword: "is Morocco safe for solo female travelers",
     scene: "medina",
     origin: "Marrakech",
@@ -490,7 +501,7 @@ export const BLOG: BlogPost[] = [
     blocks: [
       {
         type: "h2",
-        text: "The honest baseline",
+        text: "The baseline",
         },
       {
         type: "p",
@@ -531,6 +542,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "tizi-n-tichka-pass-guide",
     title: "The Tizi n'Tichka Pass: Driving Morocco's Most Dramatic Mountain Road",
+    metaTitle: "The Tizi n'Tichka Pass: A Driving Guide",
     description:
       "What the Tizi n'Tichka pass over the High Atlas actually involves — elevation, hairpin turns, the Telouet Kasbah detour, and what to expect.",
     keyword: "Tizi n'Tichka pass",
@@ -539,7 +551,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-08-01",
     readMins: 5,
     intro:
-      "Every route from Marrakech to the Sahara has to cross the High Atlas somewhere, and the Tizi n'Tichka is the road that does it — a genuinely spectacular, genuinely winding mountain pass.",
+      "Every route from Marrakech to the Sahara has to cross the High Atlas somewhere, and the Tizi n'Tichka is the road that does it: a spectacular, relentlessly winding mountain pass.",
     blocks: [
       {
         type: "h2",
@@ -555,7 +567,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Berber villages built into the hillsides, roadside stalls selling geodes and fossils, and — weather depending — snow-capped peaks visible even in warmer months at the higher elevations. It's a genuinely different Morocco from the medinas: rural, mountainous, and sparsely populated.",
+        text: "Berber villages built into the hillsides, roadside stalls selling geodes and fossils, and — weather depending — snow-capped peaks visible even in warmer months at the higher elevations. It's a different Morocco from the medinas entirely: rural, mountainous, and sparsely populated.",
       },
       {
         type: "h2",
@@ -631,6 +643,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "casablanca-to-marrakech-worth-stopping",
     title: "Casablanca to Marrakech: Is It Worth Stopping, and What to See",
+    metaTitle: "Casablanca to Marrakech: Is It Worth Stopping?",
     description:
       "What to actually do with time in Casablanca before heading to Marrakech — the Hassan II Mosque, and whether it's worth more than a half-day.",
     keyword: "Casablanca to Marrakech",
@@ -643,7 +656,7 @@ export const BLOG: BlogPost[] = [
     blocks: [
       {
         type: "h2",
-        text: "The honest case for Casablanca",
+        text: "What Casablanca is actually good for",
         },
       {
         type: "p",
@@ -775,6 +788,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "morocco-itinerary-from-tangier",
     title: "How to Plan a Morocco Itinerary From Tangier: A Port-City Guide",
+    metaTitle: "How to Plan a Morocco Itinerary From Tangier",
     description:
       "Starting a Morocco trip in Tangier — what the city offers, and how routes typically flow south from the Strait of Gibraltar toward the Sahara.",
     keyword: "Morocco itinerary from Tangier",
@@ -892,7 +906,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Sea air, a working fishing harbour, and a medina laid out with wide blue-and-white streets rather than the tighter lanes of Marrakech or Fes — it's a genuinely different pace, often several degrees cooler than inland even in peak summer.",
+        text: "Sea air, a working fishing harbour, and a medina laid out with wide blue-and-white streets rather than the tighter lanes of Marrakech or Fes. The pace is different too, and it's often several degrees cooler than inland even at the height of summer.",
       },
       {
         type: "h2",
@@ -912,11 +926,11 @@ export const BLOG: BlogPost[] = [
       },
       {
         type: "h2",
-        text: "The verdict",
+        text: "Should you bother?",
         },
       {
         type: "p",
-        text: "Worth the drive, especially if your trip is otherwise entirely inland and desert-focused — Essaouira is a genuine change of pace, not just another medina. If coastal time matters to you, ask about adding it to any Marrakech-based [itinerary](/tours?city=Marrakech).",
+        text: "If your trip is otherwise entirely inland and desert-focused, yes — Essaouira is a real change of pace, not another medina wearing a different name. Ask about adding it to any Marrakech-based [itinerary](/tours?city=Marrakech) if coastal time matters to you.",
       },
     ],
     related: ["best-moroccan-food-to-try", "morocco-in-winter-what-to-expect", "how-many-days-in-morocco"],
@@ -932,7 +946,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-06-22",
     readMins: 6,
     intro:
-      "Winter is an underrated season for Morocco — fewer crowds, clear desert skies, and genuinely comfortable daytime temperatures in most regions, with a few real cold-weather caveats worth knowing.",
+      "Winter is an underrated season for Morocco: fewer crowds, clear desert skies, and comfortable daytime temperatures across most regions, with a handful of real cold-weather caveats worth knowing.",
     blocks: [
       {
         type: "h2",
@@ -976,6 +990,7 @@ export const BLOG: BlogPost[] = [
   {
     slug: "private-driver-vs-group-tour-morocco",
     title: "Private Driver vs Group Tour in Morocco: Which Is Right for You",
+    metaTitle: "Private Driver vs Group Tour in Morocco",
     description:
       "Weighing a private driver-guide against a fixed group tour in Morocco — pace, cost per person, flexibility, and who each option actually suits.",
     keyword: "private driver vs group tour Morocco",
