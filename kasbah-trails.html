@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kasbah Trails | Private Morocco Tours &amp; Sahara Adventures</title>
-<meta name="description" content="Private, tailor-made Morocco tours guided by locals — Sahara desert circuits, imperial cities and Atlas passes from Marrakech, Fes, Casablanca and Tangier." />
-<meta property="og:title" content="Kasbah Trails | Private Morocco Tours" />
-<meta property="og:description" content="Small, private journeys across Morocco — the imperial cities, the High Atlas and the Erg Chebbi Sahara, planned around you." />
+<title>Kasbah Trails | Boutique Private Morocco Tours, Tailor-Made</title>
+<meta name="description" content="A boutique private tour operator for Morocco — small, high-touch journeys built around you, not sold off a shelf. Sahara desert circuits, imperial cities and Atlas passes from Marrakech, Fes, Casablanca and Tangier." />
+<meta property="og:title" content="Kasbah Trails | Boutique Private Morocco Tours" />
+<meta property="og:description" content="A boutique operator for private Morocco journeys — every itinerary built around you, with a dedicated driver-guide throughout. The imperial cities, the High Atlas and the Erg Chebbi Sahara." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +16,30 @@
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "Kasbah Trails",
-  "description": "Private, tailor-made Morocco tours guided by locals.",
-  "areaServed": "Morocco",
-  "makesOffer": "Private Morocco tours, Sahara desert circuits, imperial city tours"
+  "description": "Kasbah Trails is a boutique private tour operator running small, tailor-made journeys across Morocco — Sahara desert circuits, imperial city tours and High Atlas mountain passes — each with a dedicated English-speaking driver-guide and no fixed departure groups.",
+  "areaServed": { "@type": "Country", "name": "Morocco" },
+  "priceRange": "$$$",
+  "makesOffer": [
+    "Private Sahara desert tours",
+    "Imperial cities tours (Fes, Meknes, Rabat, Chefchaouen)",
+    "Custom multi-day Morocco itineraries"
+  ],
+  "knowsAbout": ["Morocco travel", "Sahara desert tours", "Erg Chebbi", "Aït Ben Haddou", "Moroccan imperial cities", "Private guided tours"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Are Kasbah Trails tours private, or do we join a group?","acceptedAnswer":{"@type":"Answer","text":"Every Kasbah Trails itinerary is 100% private — just you, your travel companions, and a dedicated driver-guide in your own vehicle. There are no strangers added to your group and no fixed departure dates to work around."}},
+    {"@type":"Question","name":"Can you customize an itinerary, or do we have to book one exactly as listed?","acceptedAnswer":{"@type":"Answer","text":"Every trip on this site is a starting point. Tell us your dates, pace and interests on WhatsApp or through the form below, and we'll adjust the route, swap in extra nights, or build something from scratch around what you actually want to see."}},
+    {"@type":"Question","name":"What's included in the price of a private Morocco tour?","acceptedAnswer":{"@type":"Answer","text":"Standard inclusions are a private air-conditioned vehicle with fuel and tolls, an English-speaking driver-guide for the whole trip, accommodation in riads, kasbahs and a desert camp, the Erg Chebbi camel trek, daily breakfast, local guides in the imperial cities, and all local taxes. International flights, most lunches and dinners, entrance fees, tips and travel insurance are not included."}},
+    {"@type":"Question","name":"How much does a private Sahara desert tour cost?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on group size, season, and the level of riad or kasbah you choose, since every trip is quoted individually rather than sold at a fixed group rate. Message us on WhatsApp with your dates and traveller count for an exact quote — there's no obligation to book."}},
+    {"@type":"Question","name":"Is Morocco safe to visit, and is a guide necessary for the Sahara?","acceptedAnswer":{"@type":"Answer","text":"Morocco is a well-established, welcoming destination for private travel, and the desert routes we run — through Ouarzazate, the gorges and Merzouga — are on paved and well-travelled roads. A local driver-guide isn't strictly required to enter the country, but it makes the long mountain and desert legs far easier, and it's how a camel trek and desert camp get arranged properly rather than booked blind."}},
+    {"@type":"Question","name":"When's the best time of year for a Sahara desert tour?","acceptedAnswer":{"@type":"Answer","text":"Spring (March to May) and autumn (September to November) give the most comfortable temperatures for both the High Atlas passes and the dunes. Summer is workable but hot in the desert by midday; winter nights in the Sahara and the mountains can be cold, so pack layers if travelling between November and February."}},
+    {"@type":"Question","name":"Which cities can a tour start and end in?","acceptedAnswer":{"@type":"Answer","text":"Most itineraries start or end in Marrakech, Fes, Casablanca or Tangier — wherever your flight lands. Filter the tours by city to see what's available, or ask us to build a route between two different cities if you don't see the combination you need."}}
+  ]
 }
 </script>
 <style>
@@ -208,6 +229,16 @@ header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -18px 
 .rev .who b{font-size:.95rem}.rev .who small{color:var(--muted);display:block;font-size:.8rem}
 @media(max-width:820px){.rev-grid{grid-template-columns:1fr}}
 
+/* faq */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{cursor:pointer;list-style:none;padding:1.1rem 0;font-family:"Fraunces";font-weight:600;
+  font-size:1.05rem;color:var(--espresso);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:"Mulish";font-weight:700;font-size:1.3rem;color:var(--terracotta);flex-shrink:0}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{color:var(--muted);padding:0 0 1.2rem;max-width:64ch}
+
 /* contact */
 .contact{background:var(--sand-2)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px)}
@@ -300,6 +331,7 @@ footer a:hover{color:var(--amber)}
       <a href="#destinations">Destinations</a>
       <a href="#how">How it works</a>
       <a href="#why">Why us</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
@@ -316,9 +348,9 @@ footer a:hover{color:var(--amber)}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kicker">Private &amp; tailor-made · guided by locals</p>
+      <p class="kicker">A boutique private tour operator · guided by locals</p>
       <h1>Morocco, from the Atlas passes to the Sahara dunes.</h1>
-      <p class="lead">Small, private journeys through the imperial cities, the High Atlas and the Erg Chebbi Sahara — no fixed groups, no rushing. Every day is shaped around you and led by guides who grew up on these roads.</p>
+      <p class="lead">Small, high-touch journeys through the imperial cities, the High Atlas and the Erg Chebbi Sahara — no fixed groups, no rushing, no itinerary sold off a shelf. Every day is shaped around you and led by guides who grew up on these roads.</p>
       <div class="hero-actions">
         <a class="btn btn-terra" href="#tours">Explore tours</a>
         <a class="btn btn-wa" id="waHero">Message us on WhatsApp</a>
@@ -434,6 +466,45 @@ footer a:hover{color:var(--amber)}
     <div style="max-width:900px;margin:1.6rem auto 0">
       <div class="rev-note">⚑ Placeholder reviews — replace these with your own verified TripAdvisor / TourRadar / Google quotes and reviewer names before going live. Real, sourced reviews build far more trust (and can be marked up for rich snippets).</div>
       <div class="rev-grid" id="revGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">Questions</p>
+      <h2>Common questions, answered</h2>
+    </div>
+    <div class="faq-list" style="margin-top:2rem">
+      <details class="faq-item">
+        <summary>Are Kasbah Trails tours private, or do we join a group?</summary>
+        <p>Every Kasbah Trails itinerary is 100% private — just you, your travel companions, and a dedicated driver-guide in your own vehicle. There are no strangers added to your group and no fixed departure dates to work around.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can you customize an itinerary, or do we have to book one exactly as listed?</summary>
+        <p>Every trip on this site is a starting point. Tell us your dates, pace and interests on WhatsApp or through the form below, and we'll adjust the route, swap in extra nights, or build something from scratch around what you actually want to see.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's included in the price of a private Morocco tour?</summary>
+        <p>Standard inclusions are a private air-conditioned vehicle with fuel and tolls, an English-speaking driver-guide for the whole trip, accommodation in riads, kasbahs and a desert camp, the Erg Chebbi camel trek, daily breakfast, local guides in the imperial cities, and all local taxes. International flights, most lunches and dinners, entrance fees, tips and travel insurance are not included.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much does a private Sahara desert tour cost?</summary>
+        <p>Pricing depends on group size, season, and the level of riad or kasbah you choose, since every trip is quoted individually rather than sold at a fixed group rate. Message us on WhatsApp with your dates and traveller count for an exact quote — there's no obligation to book.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Morocco safe to visit, and is a guide necessary for the Sahara?</summary>
+        <p>Morocco is a well-established, welcoming destination for private travel, and the desert routes we run — through Ouarzazate, the gorges and Merzouga — are on paved and well-travelled roads. A local driver-guide isn't strictly required to enter the country, but it makes the long mountain and desert legs far easier, and it's how a camel trek and desert camp get arranged properly rather than booked blind.</p>
+      </details>
+      <details class="faq-item">
+        <summary>When's the best time of year for a Sahara desert tour?</summary>
+        <p>Spring (March to May) and autumn (September to November) give the most comfortable temperatures for both the High Atlas passes and the dunes. Summer is workable but hot in the desert by midday; winter nights in the Sahara and the mountains can be cold, so pack layers if travelling between November and February.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which cities can a tour start and end in?</summary>
+        <p>Most itineraries start or end in Marrakech, Fes, Casablanca or Tangier — wherever your flight lands. Filter the tours by city to see what's available, or ask us to build a route between two different cities if you don't see the combination you need.</p>
+      </details>
     </div>
   </div>
 </section>
