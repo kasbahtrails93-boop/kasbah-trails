@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ToursSection from "@/components/ToursSection";
 import Contact from "@/components/Contact";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "All Private Morocco Tours",
@@ -17,7 +18,10 @@ export default async function ToursPage({
   return (
     <>
       <div className="border-b border-line bg-sand-2">
-        <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-8 pt-14">
+        <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-4 pt-8">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tours" }]} />
+        </div>
+        <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-8">
           <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">All itineraries</p>
           <h1 className="text-[clamp(1.9rem,4vw,3.1rem)] tracking-tight">
             Every Kasbah Trails route, ready to tailor

@@ -1,4 +1,4 @@
-import SceneSvg from "./SceneSvg";
+import Image from "next/image";
 
 const POINTS = [
   {
@@ -55,8 +55,14 @@ export default function Why() {
             ))}
           </ul>
         </div>
-        <div className="aspect-square w-full overflow-hidden rounded-3xl shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
-          <SceneSvg scene="medina" tint={["#C56A2E", "#8A3A13"]} uid="why" />
+        <div className="relative aspect-square w-full overflow-hidden rounded-3xl shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
+          <Image
+            src="/images/pool/ait-ben-haddou-guide-kasbah-road.webp"
+            alt="A local Kasbah Trails guide overlooking the kasbah of Aït Ben Haddou"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

@@ -101,7 +101,11 @@ export default function ToursSection({
           </div>
         </div>
 
-        <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <p className="mt-6 text-sm text-muted" role="status">
+          Showing {list.length} of {TOURS.length} tours
+        </p>
+
+        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {list.length ? (
             list.map((t) => <TourCard key={t.id} tour={t} onOpen={setOpenId} />)
           ) : (

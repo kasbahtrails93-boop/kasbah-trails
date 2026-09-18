@@ -39,6 +39,9 @@ export default function BlogPage() {
         </p>
       </div>
       <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-[clamp(56px,8vw,104px)]">
+        <p className="mb-6 text-sm text-muted">
+          {BLOG.length} guides
+        </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {BLOG.map((post) => (
             <BlogCard key={post.slug} post={post} />

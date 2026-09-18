@@ -1,4 +1,5 @@
 import type { BlogBlock } from "@/lib/blog";
+import { slugify } from "@/lib/slugify";
 import RichText from "./RichText";
 
 export default function BlogBlocks({ blocks }: { blocks: BlogBlock[] }) {
@@ -7,7 +8,11 @@ export default function BlogBlocks({ blocks }: { blocks: BlogBlock[] }) {
       {blocks.map((b, i) => {
         if (b.type === "h2") {
           return (
-            <h2 key={i} className="pt-2 font-serif text-2xl font-semibold text-espresso">
+            <h2
+              key={i}
+              id={slugify(b.text)}
+              className="scroll-mt-24 pt-2 font-serif text-2xl font-semibold text-espresso"
+            >
               {b.text}
             </h2>
           );
