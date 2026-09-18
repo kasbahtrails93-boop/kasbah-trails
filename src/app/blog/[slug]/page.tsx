@@ -8,7 +8,6 @@ import BlogBlocks from "@/components/BlogBlocks";
 import BlogCard from "@/components/BlogCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TableOfContents from "@/components/TableOfContents";
-import Logo from "@/components/Logo";
 
 export async function generateStaticParams() {
   return BLOG.map((p) => ({ slug: p.slug }));
@@ -91,7 +90,13 @@ export default async function BlogPostPage({
         <div className="mx-auto max-w-[820px] px-[clamp(18px,4vw,40px)] pb-10">
           <h1 className="text-[clamp(1.9rem,4vw,2.9rem)] tracking-tight">{post.title}</h1>
           <div className="mt-5 flex items-center gap-3">
-            <Logo className="h-8 w-8 shrink-0" />
+            <Image
+              src="/images/brand/kasbah-trails-mark.webp"
+              alt="Kasbah Trails"
+              width={160}
+              height={62}
+              className="h-8 w-auto shrink-0"
+            />
             <div className="text-sm">
               <p className="font-semibold text-ink">Written by the Kasbah Trails team</p>
               <p className="text-muted">

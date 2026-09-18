@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT } from "@/lib/data";
 import { waLink } from "@/lib/wa";
-import Logo from "./Logo";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,7 +11,15 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
             <div className="mb-3 flex items-center gap-2.5">
-              <Logo className="h-8 w-8 shrink-0" onDarkBg />
+              <div className="rounded-lg bg-sand p-1.5">
+                <Image
+                  src="/images/brand/kasbah-trails-mark.webp"
+                  alt="Kasbah Trails"
+                  width={160}
+                  height={62}
+                  className="h-7 w-auto"
+                />
+              </div>
               <p className="font-serif text-xl font-semibold text-white">Kasbah Trails</p>
             </div>
             <p className="max-w-[34ch] text-sm text-sand/70">
@@ -34,6 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-sand/70">
               <li><Link href="/#why" className="hover:text-white">About us</Link></li>
               <li><Link href="/#how" className="hover:text-white">How it works</Link></li>
+              <li><Link href="/#faq" className="hover:text-white">FAQ</Link></li>
               <li><Link href="/#destinations" className="hover:text-white">Destinations</Link></li>
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
               <li><Link href="/#contact" className="hover:text-white">Contact</Link></li>

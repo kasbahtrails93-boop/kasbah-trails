@@ -2,16 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { waLink } from "@/lib/wa";
-import Logo from "./Logo";
 
 const LINKS = [
   { href: "/tours", label: "Tours" },
   { href: "/#destinations", label: "Destinations" },
-  { href: "/#how", label: "How it works" },
-  { href: "/#why", label: "Why us" },
+  { href: "/#why", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -34,7 +32,14 @@ export default function Header() {
     >
       <div className="mx-auto flex h-[72px] max-w-[1200px] items-center gap-6 px-[clamp(18px,4vw,40px)]">
         <Link href="/#top" className="mr-auto flex items-center gap-2.5">
-          <Logo className="h-9 w-9 shrink-0" />
+          <Image
+            src="/images/brand/kasbah-trails-mark.webp"
+            alt="Kasbah Trails"
+            width={160}
+            height={62}
+            priority
+            className="h-9 w-auto shrink-0"
+          />
           <span className="font-serif text-xl font-semibold text-espresso">Kasbah Trails</span>
         </Link>
 
