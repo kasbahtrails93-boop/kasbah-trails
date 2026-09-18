@@ -7,7 +7,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Morocco Travel Guides & Tips",
   description:
-    "Practical Morocco travel guides from a boutique private tour operator — itinerary planning, the Sahara, packing lists, city comparisons and honest answers to the questions travellers actually ask.",
+    "Practical Morocco travel guides from a boutique private tour operator — itinerary planning, packing lists, city comparisons and clear answers to the questions travellers ask most.",
+  alternates: { canonical: "/blog" },
 };
 
 const blogListJsonLd = {

@@ -11,13 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  const tourCityRoutes: MetadataRoute.Sitemap = Array.from(new Set(TOURS.map((t) => t.from))).map(
-    (city) => ({
-      url: `${SITE_URL}/tours?city=${encodeURIComponent(city)}`,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    })
-  );
+  const tourRoutes: MetadataRoute.Sitemap = TOURS.map((tour) => ({
+    url: `${SITE_URL}/tours/${tour.id}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
 
   const blogRoutes: MetadataRoute.Sitemap = BLOG.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
@@ -26,5 +24,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...tourCityRoutes, ...blogRoutes];
+  return [...staticRoutes, ...tourRoutes, ...blogRoutes];
 }

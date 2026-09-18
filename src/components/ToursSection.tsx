@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { TOURS, type Tour } from "@/lib/data";
 import TourCard from "./TourCard";
-import TourModal from "./TourModal";
 
 const CITY_CHIPS: { label: string; value: string }[] = [
   { label: "All cities", value: "all" },
@@ -67,13 +66,11 @@ export default function ToursSection({
 }) {
   const [fCity, setFCity] = useState(CITY_VALUES.has(initialCity) ? initialCity : "all");
   const [fLen, setFLen] = useState(LEN_VALUES.has(initialLen) ? initialLen : "all");
-  const [openId, setOpenId] = useState<string | null>(null);
 
   const list = useMemo(
     () => TOURS.filter((t) => cityMatch(t, fCity) && lenMatch(t, fLen)),
     [fCity, fLen]
   );
-  const openTour = openId ? TOURS.find((t) => t.id === openId) ?? null : null;
 
   return (
     <section id="tours">
@@ -107,7 +104,7 @@ export default function ToursSection({
 
         <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {list.length ? (
-            list.map((t) => <TourCard key={t.id} tour={t} onOpen={setOpenId} />)
+            list.map((t) => <TourCard key={t.id} tour={t} />)
           ) : (
             <div className="col-span-full rounded-2xl border border-dashed border-line p-10 text-center text-muted">
               No tours match those filters yet — try widening your search, or{" "}
@@ -119,8 +116,6 @@ export default function ToursSection({
           )}
         </div>
       </div>
-
-      {openTour && <TourModal tour={openTour} onClose={() => setOpenId(null)} />}
     </section>
   );
 }

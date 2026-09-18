@@ -1,17 +1,11 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { TOURS } from "@/lib/data";
 import TourCard from "./TourCard";
-import TourModal from "./TourModal";
 
 const FEATURED_IDS = ["3-mar", "5-mar", "7-mar", "8-best-mar", "10-totally-mar", "12-mar"];
 
 export default function FeaturedTours() {
-  const [openId, setOpenId] = useState<string | null>(null);
   const featured = FEATURED_IDS.map((id) => TOURS.find((t) => t.id === id)!).filter(Boolean);
-  const openTour = openId ? TOURS.find((t) => t.id === openId) ?? null : null;
 
   return (
     <section id="tours">
@@ -27,7 +21,7 @@ export default function FeaturedTours() {
 
         <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((t) => (
-            <TourCard key={t.id} tour={t} onOpen={setOpenId} />
+            <TourCard key={t.id} tour={t} />
           ))}
         </div>
 
@@ -43,8 +37,6 @@ export default function FeaturedTours() {
           </Link>
         </div>
       </div>
-
-      {openTour && <TourModal tour={openTour} onClose={() => setOpenId(null)} />}
     </section>
   );
 }

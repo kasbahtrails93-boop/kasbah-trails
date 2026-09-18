@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   },
   description:
     "A boutique private tour operator for Morocco — small, high-touch journeys built around you, not sold off a shelf. Sahara desert circuits, imperial cities and Atlas passes from Marrakech, Fes, Casablanca and Tangier.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Kasbah Trails | Boutique Private Morocco Tours",
     description:

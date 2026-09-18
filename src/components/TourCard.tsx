@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Tour } from "@/lib/data";
 import { waLink } from "@/lib/wa";
 import { pickPhoto } from "@/lib/photoPool";
 
-export default function TourCard({ tour, onOpen }: { tour: Tour; onOpen: (id: string) => void }) {
+export default function TourCard({ tour }: { tour: Tour }) {
   const photo = pickPhoto(tour.scene, tour.id);
 
   return (
     <article className="overflow-hidden rounded-2xl border border-line bg-card shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
-      <div className="relative aspect-[16/10]">
+      <Link href={`/tours/${tour.id}`} className="relative block aspect-[16/10]">
         <Image
           src={photo.src}
           alt={photo.alt}
@@ -25,7 +26,7 @@ export default function TourCard({ tour, onOpen }: { tour: Tour; onOpen: (id: st
             {tour.cat}
           </span>
         </div>
-      </div>
+      </Link>
       <div className="p-5">
         <div className="mb-1.5 flex items-center gap-1.5 text-xs font-bold text-muted">
           {tour.from}
@@ -34,15 +35,19 @@ export default function TourCard({ tour, onOpen }: { tour: Tour; onOpen: (id: st
           </svg>
           {tour.to}
         </div>
-        <h3 className="mb-2 font-serif text-lg font-semibold">{tour.title}</h3>
+        <h3 className="mb-2 font-serif text-lg font-semibold">
+          <Link href={`/tours/${tour.id}`} className="hover:text-terracotta">
+            {tour.title}
+          </Link>
+        </h3>
         <p className="mb-4 text-sm text-muted">{tour.blurb}</p>
         <div className="flex flex-wrap items-center gap-2">
-          <button
-            onClick={() => onOpen(tour.id)}
+          <Link
+            href={`/tours/${tour.id}`}
             className="rounded-full border border-line px-4 py-2 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
           >
             View itinerary
-          </button>
+          </Link>
           <a
             href={waLink(`Hi Kasbah Trails, I'd like details on the ${tour.title}.`)}
             target="_blank"

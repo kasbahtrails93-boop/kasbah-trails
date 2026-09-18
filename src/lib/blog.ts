@@ -40,7 +40,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "If you only have a long weekend, don't try to cover the whole country — pick one loop and do it well. The classic move is a [3-day Sahara desert tour from Marrakech](/tours?city=Marrakech&len=1-3): over the High Atlas, a night at a desert camp under Erg Chebbi's dunes, and back. It's tight but genuinely satisfying, not just a box-ticking exercise.",
+        text: "If you only have a long weekend, don't try to cover the whole country — pick one loop and do it well. The classic move is a [3-day Sahara desert tour from Marrakech](/tours/3-mar): over the High Atlas, a night at a desert camp under Erg Chebbi's dunes, and back. It's tight but genuinely satisfying, not just a box-ticking exercise.",
       },
       {
         type: "h2",
@@ -48,7 +48,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "A week is enough to combine the desert with either the imperial cities or the Atlantic coast, without feeling rushed. Most first-time visitors land on something close to our [7-day Sahara desert tour from Marrakech](/tours?city=Marrakech&len=4-7), which adds the Dades and Todgha gorges and a full day around Merzouga to the 3-day route. See our [7-day itinerary breakdown](/blog/7-days-in-morocco-itinerary) for exactly how that week is paced.",
+        text: "A week is enough to combine the desert with either the imperial cities or the Atlantic coast, without feeling rushed. Most first-time visitors land on something close to our [7-day Sahara desert tour from Marrakech](/tours/7-mar), which adds the Dades and Todgha gorges and a full day around Merzouga to the 3-day route. See our [7-day itinerary breakdown](/blog/7-days-in-morocco-itinerary) for exactly how that week is paced.",
       },
       {
         type: "h2",
@@ -56,7 +56,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "This is where you can realistically add Fes's medina, the Rif mountains and Chefchaouen, and still not feel like you're sleeping in a different bed every night. Our [10 and 12-day grand tours](/tours?len=8-11) are built around two nights in the desert instead of one, which changes the pace of the whole trip — less driving per day, more time at each stop.",
+        text: "This is where you can realistically add Fes's medina, the Rif mountains and Chefchaouen, and still not feel like you're sleeping in a different bed every night. Our [10-day](/tours/10-totally-mar) and [12-day](/tours/12-mar) grand tours are built around two nights in the desert instead of one, which changes the pace of the whole trip — less driving per day, more time at each stop.",
       },
       {
         type: "h2",
@@ -64,7 +64,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "At 14 to 15 days you can fit in the Atlantic coast at Essaouira, the capital Rabat, and still keep the unhurried pace that makes a trip memorable rather than exhausting. It's the version of Morocco we'd recommend if your schedule allows it — see the full [15-day grand Morocco tour](/tours?len=12%2B) for the complete route.",
+        text: "At 14 to 15 days you can fit in the Atlantic coast at Essaouira, the capital Rabat, and still keep the unhurried pace that makes a trip memorable rather than exhausting. It's the version of Morocco we'd recommend if your schedule allows it — see the full [15-day grand Morocco tour](/tours/15-grand-mar) for the complete route.",
       },
       {
         type: "p",
@@ -144,7 +144,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Merzouga, the gateway to the Erg Chebbi dunes, is about 560km from Marrakech by road — but almost nobody drives it in one push, because the route itself is most of the point. Our [3-day Sahara desert tour from Marrakech](/tours?city=Marrakech&len=1-3) splits it into: Marrakech to the Dades Valley on day one, Dades to Merzouga on day two, and the return leg on day three.",
+        text: "Merzouga, the gateway to the Erg Chebbi dunes, is about 560km from Marrakech by road — but almost nobody drives it in one push, because the route itself is most of the point. Our [3-day Sahara desert tour from Marrakech](/tours/3-mar) splits it into: Marrakech to the Dades Valley on day one, Dades to Merzouga on day two, and the return leg on day three.",
       },
       {
         type: "h2",
@@ -204,7 +204,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Half a day is enough to wander the main lanes and Plaza Uta el-Hammam; a full day lets you add a hike to the [Akchour waterfalls](https://en.wikipedia.org/wiki/Chefchaouen) in the hills outside town. It's rarely the only stop on a route — most itineraries pair it with the Rif Mountains drive and either Fes or Tangier on either side, like our [6-day Marrakech Express from Tangier](/tours?city=Tangier&len=4-7).",
+        text: "Half a day is enough to wander the main lanes and Plaza Uta el-Hammam; a full day lets you add a hike to the [Akchour waterfalls](https://en.wikipedia.org/wiki/Chefchaouen) in the hills outside town. It's rarely the only stop on a route — most itineraries pair it with the Rif Mountains drive and either Fes or Tangier on either side, like our [6-day Marrakech Express from Tangier](/tours/6-tan-mar).",
       },
       {
         type: "h2",
@@ -344,7 +344,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Marrakech's medina is dense and commercial, centred on Jemaa el-Fnaa's food stalls and performers. It's an easier first stop for jet-lagged travellers — more riads, more English spoken, and it's the starting point for most desert routes, including our [3-day](/tours?city=Marrakech&len=1-3) and [5-day](/tours?city=Marrakech&len=4-7) Sahara tours.",
+        text: "Marrakech's medina is dense and commercial, centred on Jemaa el-Fnaa's food stalls and performers. It's an easier first stop for jet-lagged travellers — more riads, more English spoken, and it's the starting point for most desert routes, including our [3-day](/tours/3-mar) and [5-day](/tours/5-mar) Sahara tours.",
       },
       {
         type: "h2",
@@ -368,7 +368,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Anything 6 days or longer tends to connect them — our [6-day desert tour from Marrakech to Fes](/tours?len=4-7) and most [8+ day grand tours](/tours?len=8-11) visit both cities either side of the desert loop, so the either/or choice mostly only matters on shorter trips.",
+        text: "Anything 6 days or longer tends to connect them — our [6-day desert tour from Marrakech to Fes](/tours/6-mar-fes) and most [8+ day grand tours](/tours?len=8-11) visit both cities either side of the desert loop, so the either/or choice mostly only matters on shorter trips.",
       },
     ],
     related: ["how-many-days-in-morocco", "best-moroccan-food-to-try", "riad-vs-hotel-morocco"],
@@ -470,7 +470,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Most itineraries have you up before dawn to watch the sunrise from the dunes directly above camp — genuinely worth the early alarm. Some routes include a second night and a 4x4 excursion the following day, like our [4-day Marrakech desert tour](/tours?city=Marrakech&len=1-3) with its added off-road day and nomad family visit, rather than heading straight back after one night.",
+        text: "Most itineraries have you up before dawn to watch the sunrise from the dunes directly above camp — genuinely worth the early alarm. Some routes include a second night and a 4x4 excursion the following day, like our [4-day Marrakech desert tour](/tours/4-mar) with its added off-road day and nomad family visit, rather than heading straight back after one night.",
       },
     ],
     related: ["what-to-pack-sahara-desert-tour", "best-time-to-visit-sahara-desert-morocco", "marrakech-to-sahara-desert-guide"],
@@ -611,7 +611,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Depending on your exact route, day 4 either heads back toward Marrakech via a different stretch of the kasbah road, or continues north toward Fes through the Middle Atlas cedar forests. Our [7-day Sahara desert tour from Marrakech](/tours?city=Marrakech&len=4-7) does the former; several of our [6-day routes](/tours?len=4-7) do the latter.",
+        text: "Depending on your exact route, day 4 either heads back toward Marrakech via a different stretch of the kasbah road, or continues north toward Fes through the Middle Atlas cedar forests. Our [7-day Sahara desert tour from Marrakech](/tours/7-mar) does the former; several of our [6-day routes](/tours?len=4-7) do the latter.",
       },
       {
         type: "h2",
@@ -663,7 +663,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Several of our [Casablanca-starting tours](/tours?city=Casablanca) route through it as a first-morning stop before heading toward Rabat and the north, or directly toward Marrakech and the desert. It works well as a bookend rather than a standalone destination — see our [5-day Casablanca to Marrakech tour](/tours?city=Casablanca&len=4-7) for how that looks in practice.",
+        text: "Several of our [Casablanca-starting tours](/tours?city=Casablanca) route through it as a first-morning stop before heading toward Rabat and the north, or directly toward Marrakech and the desert. It works well as a bookend rather than a standalone destination — see our [5-day Casablanca to Marrakech tour](/tours/5-casa-mar) for how that looks in practice.",
       },
       {
         type: "h2",
@@ -807,7 +807,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Shorter Tangier itineraries loop back north after Fes and Chefchaouen; longer ones continue all the way to the Sahara and Marrakech. Our [6-day Marrakech Express from Tangier](/tours?city=Tangier&len=4-7) does the full north-to-south run in under a week; the [14-day grand tour from Tangier](/tours?city=Tangier&len=12%2B) adds the Atlantic coast and a proper two-desert-night pace.",
+        text: "Shorter Tangier itineraries loop back north after Fes and Chefchaouen; longer ones continue all the way to the Sahara and Marrakech. Our [6-day Marrakech Express from Tangier](/tours/6-tan-mar) does the full north-to-south run in under a week; the [14-day grand tour from Tangier](/tours/14-tan) adds the Atlantic coast and a proper two-desert-night pace.",
       },
       {
         type: "h2",
@@ -908,7 +908,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "A day trip covers the highlights but feels rushed given the drive time each way. An overnight lets you catch golden hour on the ramparts and the medina at its quietest in early morning, before day-trippers arrive from Marrakech. Several of our longer itineraries, like the [12-day tour from Marrakech](/tours?len=8-11), build in a full overnight rather than a rushed day visit.",
+        text: "A day trip covers the highlights but feels rushed given the drive time each way. An overnight lets you catch golden hour on the ramparts and the medina at its quietest in early morning, before day-trippers arrive from Marrakech. Several of our longer itineraries, like the [12-day tour from Marrakech](/tours/12-mar), build in a full overnight rather than a rushed day visit.",
       },
       {
         type: "h2",
