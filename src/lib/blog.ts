@@ -457,7 +457,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Camel treks into the Erg Chebbi dunes almost always leave in the late afternoon, timed so the ride to camp coincides with sunset. It's roughly an hour on camelback, single file, led by a guide on foot — steadier and less physically demanding than it looks, though your legs will feel it if you're not used to riding.",
+        text: "Camel treks into the Erg Chebbi dunes almost always leave in the late afternoon, timed so the ride to camp coincides with sunset. It's roughly an hour on the back of a [dromedary](https://en.wikipedia.org/wiki/Dromedary) — the one-humped camel used throughout North Africa — single file, led by a guide on foot. Steadier and less physically demanding than it looks, though your legs will feel it if you're not used to riding.",
       },
       {
         type: "h2",
@@ -505,7 +505,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Morocco is a widely visited, tourism-dependent country, and solo women travel it every day without incident. That said, medina streets can involve more direct attention and unsolicited comments than many Western travellers are used to — mostly harmless but occasionally tiresome, particularly in the busiest souks of Marrakech and Fes.",
+        text: "Morocco is a widely visited, tourism-dependent country, and solo women travel it every day without incident. That said, medina streets can involve more direct attention and unsolicited comments than many Western travellers are used to — mostly harmless but occasionally tiresome, particularly in the busiest souks of Marrakech and Fes. It's worth checking your own government's [current travel advice for Morocco](https://www.gov.uk/foreign-travel-advice/morocco) before you go, since those pages track region-specific updates we wouldn't otherwise flag.",
       },
       {
         type: "h2",
@@ -559,7 +559,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "The pass tops out above 2,200 metres, making the N9 highway one of the highest paved roads in North Africa. The full climb and descent from Marrakech's side to Ouarzazate's takes a few hours including stops, through a long series of switchbacks carved into the mountainside.",
+        text: "The [pass](https://en.wikipedia.org/wiki/Tizi_n%27Tichka) tops out above 2,200 metres, making the N9 highway one of the highest paved roads in North Africa. The full climb and descent from Marrakech's side to Ouarzazate's takes a few hours including stops, through a long series of switchbacks carved into the mountainside.",
       },
       {
         type: "h2",
@@ -660,7 +660,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "It's Morocco's largest city and its economic capital, but it's not primarily a tourism destination — the appeal is narrower than Marrakech or Fes. The main reason to stop is the Hassan II Mosque, one of the largest mosques in the world and one of the few in Morocco that non-Muslim visitors can enter on a guided tour.",
+        text: "It's Morocco's largest city and its economic capital, but it's not primarily a tourism destination — the appeal is narrower than Marrakech or Fes. The main reason to stop is the [Hassan II Mosque](https://en.wikipedia.org/wiki/Hassan_II_Mosque), one of the largest mosques in the world and one of the few in Morocco that non-Muslim visitors can enter on a guided tour.",
       },
       {
         type: "h2",
@@ -700,7 +700,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-07-17",
     readMins: 5,
     intro:
-      "It's a word that shows up on every Morocco booking site, and it's worth understanding before you choose, since a riad and a hotel are genuinely different kinds of stay.",
+      "It's a word that shows up on every Morocco booking site, and it's worth understanding before you choose, since a riad and a hotel are different kinds of stay entirely.",
     blocks: [
       {
         type: "h2",
@@ -708,7 +708,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "A riad is a traditional Moroccan house or palace built around an interior courtyard or garden, historically with the family's private life turned inward and away from the street. Most riads operating as guesthouses today have been carefully restored, keeping features like carved plasterwork, zellige tilework, and a central courtyard that often doubles as the breakfast area.",
+        text: "A [riad](https://en.wikipedia.org/wiki/Riad) is a traditional Moroccan house or palace built around an interior courtyard or garden, historically with the family's private life turned inward and away from the street. Most riads operating as guesthouses today have been carefully restored, keeping features like carved plasterwork, zellige tilework, and a central courtyard that often doubles as the breakfast area.",
       },
       {
         type: "h2",
@@ -756,7 +756,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "Todgha's defining feature is how close its limestone walls press in — up to 300 metres high in places, with the canyon floor narrowing to just a few dozen metres at its tightest point near Tinghir. It's a genuine walking destination: a flat riverside path lets you go in on foot and properly feel the scale.",
+        text: "[Todgha Gorge's](https://en.wikipedia.org/wiki/Todgha_Gorge) defining feature is how close its limestone walls press in — up to 300 metres high in places, with the canyon floor narrowing to just a few dozen metres at its tightest point near Tinghir. It's a genuine walking destination: a flat riverside path lets you go in on foot and properly feel the scale.",
       },
       {
         type: "h2",
@@ -805,7 +805,7 @@ export const BLOG: BlogPost[] = [
         },
       {
         type: "p",
-        text: "A compact medina, the Kasbah Museum, and views out over the Strait of Gibraltar where the Atlantic meets the Mediterranean — on a clear day you can see Spain's coastline. It's worth a full day before heading further into the country.",
+        text: "A compact medina, the Kasbah Museum, and views out over the [Strait of Gibraltar](https://en.wikipedia.org/wiki/Strait_of_Gibraltar) where the Atlantic meets the Mediterranean — on a clear day you can see Spain's coastline. It's worth a full day before heading further into the country.",
       },
       {
         type: "h2",
@@ -845,7 +845,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-07-02",
     readMins: 6,
     intro:
-      "Tagine gets all the international attention, and it deserves some of it — but Moroccan food is far more varied than the one dish most visitors know by name.",
+      "Tagine gets all the international attention, and it deserves some of it — but [Moroccan cuisine](https://en.wikipedia.org/wiki/Moroccan_cuisine) is far more varied than the one dish most visitors know by name.",
     blocks: [
       {
         type: "h2",
@@ -898,7 +898,7 @@ export const BLOG: BlogPost[] = [
     date: "2026-06-27",
     readMins: 5,
     intro:
-      "Essaouira is the Atlantic answer to Marrakech's desert-facing itineraries — a fortified port town with a completely different atmosphere, about 2.5 hours from the Red City.",
+      "[Essaouira](https://en.wikipedia.org/wiki/Essaouira) is the Atlantic answer to Marrakech's desert-facing itineraries — a fortified port town with a completely different atmosphere, about 2.5 hours from the Red City.",
     blocks: [
       {
         type: "h2",
