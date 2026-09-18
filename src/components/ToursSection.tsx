@@ -55,9 +55,18 @@ function Chip({
   );
 }
 
-export default function ToursSection() {
-  const [fCity, setFCity] = useState("all");
-  const [fLen, setFLen] = useState("all");
+const CITY_VALUES = new Set(CITY_CHIPS.map((c) => c.value));
+const LEN_VALUES = new Set(LEN_CHIPS.map((c) => c.value));
+
+export default function ToursSection({
+  initialCity = "all",
+  initialLen = "all",
+}: {
+  initialCity?: string;
+  initialLen?: string;
+}) {
+  const [fCity, setFCity] = useState(CITY_VALUES.has(initialCity) ? initialCity : "all");
+  const [fLen, setFLen] = useState(LEN_VALUES.has(initialLen) ? initialLen : "all");
   const [openId, setOpenId] = useState<string | null>(null);
 
   const list = useMemo(

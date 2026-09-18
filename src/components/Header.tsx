@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { waLink } from "@/lib/wa";
 
 const LINKS = [
-  { href: "#tours", label: "Tours" },
-  { href: "#destinations", label: "Destinations" },
-  { href: "#how", label: "How it works" },
-  { href: "#why", label: "Why us" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/tours", label: "Tours" },
+  { href: "/#destinations", label: "Destinations" },
+  { href: "/#how", label: "How it works" },
+  { href: "/#why", label: "Why us" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -30,9 +32,9 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-[1200px] items-center gap-6 px-[clamp(18px,4vw,40px)]">
-        <a href="#top" className="mr-auto font-serif text-xl font-semibold text-espresso">
+        <Link href="/#top" className="mr-auto font-serif text-xl font-semibold text-espresso">
           Kasbah Trails
-        </a>
+        </Link>
 
         <nav
           aria-label="Main"
@@ -41,14 +43,14 @@ export default function Header() {
           } flex`}
         >
           {LINKS.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
               className="font-semibold text-ink hover:text-terracotta max-[940px]:w-full max-[940px]:border-b max-[940px]:border-line max-[940px]:py-3"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -61,12 +63,12 @@ export default function Header() {
           >
             WhatsApp
           </a>
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-sm font-bold text-espresso-2 shadow-[0_10px_22px_-12px_rgba(206,138,37,.9)] hover:bg-amber-d"
           >
             Plan my trip
-          </a>
+          </Link>
           <button
             aria-label="Menu"
             aria-expanded={open}

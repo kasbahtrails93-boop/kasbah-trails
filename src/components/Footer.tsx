@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CONTACT } from "@/lib/data";
 import { waLink } from "@/lib/wa";
 
@@ -17,20 +18,21 @@ export default function Footer() {
           <div>
             <h4 className="mb-3 font-serif text-base font-semibold text-white">Tours</h4>
             <ul className="space-y-2 text-sm text-sand/70">
-              <li><a href="#tours" className="hover:text-white">From Marrakech</a></li>
-              <li><a href="#tours" className="hover:text-white">From Fes</a></li>
-              <li><a href="#tours" className="hover:text-white">From Casablanca</a></li>
-              <li><a href="#tours" className="hover:text-white">From Tangier</a></li>
-              <li><a href="#tours" className="hover:text-white">All tours</a></li>
+              <li><Link href="/tours?city=Marrakech" className="hover:text-white">From Marrakech</Link></li>
+              <li><Link href="/tours?city=Fes" className="hover:text-white">From Fes</Link></li>
+              <li><Link href="/tours?city=Casablanca" className="hover:text-white">From Casablanca</Link></li>
+              <li><Link href="/tours?city=Tangier" className="hover:text-white">From Tangier</Link></li>
+              <li><Link href="/tours" className="hover:text-white">All tours</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="mb-3 font-serif text-base font-semibold text-white">Company</h4>
             <ul className="space-y-2 text-sm text-sand/70">
-              <li><a href="#why" className="hover:text-white">About us</a></li>
-              <li><a href="#how" className="hover:text-white">How it works</a></li>
-              <li><a href="#destinations" className="hover:text-white">Destinations</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
+              <li><Link href="/#why" className="hover:text-white">About us</Link></li>
+              <li><Link href="/#how" className="hover:text-white">How it works</Link></li>
+              <li><Link href="/#destinations" className="hover:text-white">Destinations</Link></li>
+              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link href="/#contact" className="hover:text-white">Contact</Link></li>
               <li>
                 <a
                   href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}

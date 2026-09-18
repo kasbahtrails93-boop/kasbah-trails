@@ -8,7 +8,12 @@ export const metadata: Metadata = {
     "Browse all 33 private, tailor-made Morocco tours — 3 to 15 days, from Marrakech, Fes, Casablanca or Tangier. Filter by start city and length, then customize any route.",
 };
 
-export default function ToursPage() {
+export default async function ToursPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ city?: string; len?: string }>;
+}) {
+  const { city, len } = await searchParams;
   return (
     <>
       <div className="border-b border-line bg-sand-2">
@@ -23,7 +28,7 @@ export default function ToursPage() {
           </p>
         </div>
       </div>
-      <ToursSection />
+      <ToursSection initialCity={city} initialLen={len} />
       <Contact />
     </>
   );
