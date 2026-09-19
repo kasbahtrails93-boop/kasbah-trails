@@ -6,8 +6,8 @@ import { waLink } from "@/lib/wa";
 
 const SLIDES = [
   {
-    src: "/images/hero/sahara-camel-riders-sunset-rays.webp",
-    alt: "Camel riders silhouetted on a dune as sunbeams break through clouds over the Sahara, Morocco",
+    src: "/images/hero/sahara-caravan-guide-golden-hour.webp",
+    alt: "A guide leading a loaded camel caravan across the Sahara dunes at golden hour, Morocco",
     tag: "Erg Chebbi, the Sahara",
   },
   {
@@ -110,8 +110,8 @@ export default function HeroSlider() {
           Morocco, from the Atlas passes to the Sahara dunes.
         </h1>
         <p className="mt-5 max-w-[54ch] text-[1.06rem] text-white/80">
-          Small, high-touch journeys through the imperial cities, the High Atlas and the Erg
-          Chebbi Sahara — no fixed groups, no rushing, no itinerary sold off a shelf.
+          Privately guided journeys through the imperial cities, over the High Atlas and into the
+          Erg Chebbi dunes — unhurried, and shaped entirely around you.
         </p>
 
         <div className="mt-7 flex flex-wrap items-center gap-3">

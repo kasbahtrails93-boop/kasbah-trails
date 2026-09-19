@@ -9,8 +9,8 @@ export interface Photo {
 
 const DUNES: Photo[] = [
   {
-    src: "/images/hero/sahara-camel-riders-sunset-rays.webp",
-    alt: "Camel riders silhouetted on a dune as sunbeams break through clouds over the Sahara, Morocco",
+    src: "/images/hero/sahara-caravan-guide-golden-hour.webp",
+    alt: "A guide leading a loaded camel caravan across the Sahara dunes at golden hour, Morocco",
   },
   {
     src: "/images/destinations/erg-chebbi-merzouga-camel-trek.webp",
