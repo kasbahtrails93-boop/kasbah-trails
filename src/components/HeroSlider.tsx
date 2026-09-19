@@ -102,7 +102,7 @@ export default function HeroSlider() {
         <div className="mb-5 flex items-start gap-3">
           <span className="mt-[7px] h-px w-6 shrink-0 bg-amber sm:mt-[9px] sm:w-10" />
           <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-amber sm:text-xs sm:tracking-[0.16em]">
-            A boutique private tour operator
+            Bespoke, private Morocco journeys
           </span>
         </div>
 
