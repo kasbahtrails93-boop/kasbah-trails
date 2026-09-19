@@ -11,15 +11,13 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
             <div className="mb-3 flex items-center gap-2.5">
-              <div className="rounded-lg bg-sand p-1.5">
-                <Image
-                  src="/images/brand/kasbah-trails-mark.webp"
-                  alt="Kasbah Trails"
-                  width={160}
-                  height={62}
-                  className="h-7 w-auto"
-                />
-              </div>
+              <Image
+                src="/images/brand/kasbah-trails-mark.png"
+                alt="Kasbah Trails"
+                width={160}
+                height={62}
+                className="h-8 w-auto"
+              />
               <p className="font-serif text-xl font-semibold text-white">Kasbah Trails</p>
             </div>
             <p className="max-w-[34ch] text-sm text-sand/70">

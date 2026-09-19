@@ -92,7 +92,7 @@ export default async function BlogPostPage({
           <h1 className="text-[clamp(1.9rem,4vw,2.9rem)] tracking-tight">{post.title}</h1>
           <div className="mt-5 flex items-center gap-3">
             <Image
-              src="/images/brand/kasbah-trails-mark.webp"
+              src="/images/brand/kasbah-trails-mark.png"
               alt="Kasbah Trails"
               width={160}
               height={62}

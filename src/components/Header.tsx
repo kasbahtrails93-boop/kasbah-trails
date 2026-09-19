@@ -32,7 +32,7 @@ export default function Header() {
       <div className="mx-auto flex h-[72px] max-w-[1200px] items-center gap-6 px-[clamp(18px,4vw,40px)]">
         <Link href="/#top" className="mr-auto flex items-center gap-2.5">
           <Image
-            src="/images/brand/kasbah-trails-mark.webp"
+            src="/images/brand/kasbah-trails-mark.png"
             alt="Kasbah Trails"
             width={160}
             height={62}
