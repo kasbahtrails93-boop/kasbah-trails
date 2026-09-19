@@ -9,8 +9,8 @@ export interface Photo {
 
 const DUNES: Photo[] = [
   {
-    src: "/images/hero/sahara-camel-caravan-sunset.webp",
-    alt: "Camel caravan silhouetted against a Sahara desert sunset near Erg Chebbi, Morocco",
+    src: "/images/hero/sahara-camel-riders-sunset-rays.webp",
+    alt: "Camel riders silhouetted on a dune as sunbeams break through clouds over the Sahara, Morocco",
   },
   {
     src: "/images/destinations/erg-chebbi-merzouga-camel-trek.webp",
@@ -24,8 +24,8 @@ const DUNES: Photo[] = [
 
 const MEDINA: Photo[] = [
   {
-    src: "/images/hero/ait-ben-haddou-kasbah.webp",
-    alt: "The fortified earthen ksar of Aït Ben Haddou, a UNESCO World Heritage site in Morocco",
+    src: "/images/hero/kasbah-road-ouarzazate.webp",
+    alt: "The Taourirt Kasbah's red earthen towers against a clear sky in Ouarzazate, Morocco",
   },
   {
     src: "/images/destinations/fes-medina-chouara-tannery.webp",
@@ -55,8 +55,8 @@ const COAST: Photo[] = [
     alt: "The Skala fortress and blue fishing boats in the harbour of Essaouira, Morocco",
   },
   {
-    src: "/images/hero/tangier-strait-of-gibraltar-view.webp",
-    alt: "A kasbah terrace overlooking the Strait of Gibraltar in Tangier, Morocco",
+    src: "/images/hero/tangier-corniche-coast.webp",
+    alt: "An aerial view of Tangier's coastal corniche road curving along the Mediterranean, Morocco",
   },
   {
     src: "/images/pool/casablanca-corniche-lighthouse.webp",

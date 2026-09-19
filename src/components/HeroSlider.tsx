@@ -6,23 +6,23 @@ import { waLink } from "@/lib/wa";
 
 const SLIDES = [
   {
-    src: "/images/hero/sahara-camel-caravan-sunset.webp",
-    alt: "Camel caravan silhouetted against a Sahara desert sunset near Erg Chebbi, Morocco",
+    src: "/images/hero/sahara-camel-riders-sunset-rays.webp",
+    alt: "Camel riders silhouetted on a dune as sunbeams break through clouds over the Sahara, Morocco",
     tag: "Erg Chebbi, the Sahara",
   },
   {
-    src: "/images/hero/ait-ben-haddou-kasbah.webp",
-    alt: "The fortified earthen ksar of Aït Ben Haddou, a UNESCO World Heritage site in Morocco",
-    tag: "Aït Ben Haddou, on the kasbah road",
+    src: "/images/hero/kasbah-road-ouarzazate.webp",
+    alt: "The Taourirt Kasbah's red earthen towers against a clear sky in Ouarzazate, Morocco",
+    tag: "Ouarzazate, the kasbah road",
   },
   {
-    src: "/images/hero/chefchaouen-viewpoint-couple.webp",
-    alt: "A couple overlooking the blue-washed hillside town of Chefchaouen at dusk",
+    src: "/images/hero/chefchaouen-blue-courtyard.webp",
+    alt: "A tea set on a low table in a cobalt-blue courtyard in Chefchaouen, Morocco",
     tag: "Chefchaouen, the blue city",
   },
   {
-    src: "/images/hero/tangier-strait-of-gibraltar-view.webp",
-    alt: "A kasbah terrace overlooking the Strait of Gibraltar in Tangier, Morocco",
+    src: "/images/hero/tangier-corniche-coast.webp",
+    alt: "An aerial view of Tangier's coastal corniche road curving along the Mediterranean, Morocco",
     tag: "Tangier, where two seas meet",
   },
 ];
@@ -73,74 +73,68 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* brand-tinted legibility wash, replacing a flat black overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-espresso-2/90 via-espresso-2/25 to-terracotta/10 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent" />
+      {/* cinematic vignette: darkest where the text sits, clear toward the far corner */}
+      <div className="absolute inset-0 bg-[radial-gradient(120%_100%_at_0%_100%,rgba(20,10,4,.88)_0%,rgba(20,10,4,.45)_38%,rgba(20,10,4,.08)_68%)]" />
+      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/35 to-transparent" />
 
-      {/* story-style progress bar */}
-      <div className="absolute inset-x-0 top-0 z-10 flex gap-1.5 p-3 sm:p-4">
-        {SLIDES.map((s, i) => (
-          <button
-            key={s.src}
-            aria-label={`Show slide: ${s.tag}`}
-            aria-current={i === active}
-            onClick={() => setActive(i)}
-            className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/25"
-          >
-            <span
-              className={`block h-full origin-left rounded-full bg-amber ${
-                i === active
-                  ? `animate-[hero-progress_var(--dur)_linear_forwards] ${paused ? "[animation-play-state:paused]" : ""}`
-                  : i < active
-                    ? "w-full scale-x-100"
-                    : "scale-x-0"
-              }`}
-              style={{ "--dur": `${AUTOPLAY_MS}ms` } as React.CSSProperties}
-            />
-          </button>
-        ))}
-      </div>
+      {/* inset gallery frame */}
+      <div className="pointer-events-none absolute inset-3 rounded-2xl border border-white/25 sm:inset-4" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-[clamp(40px,7vw,80px)]">
-        <div className="max-w-[640px] rounded-3xl border border-white/15 bg-black/20 p-7 backdrop-blur-md sm:p-9">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-bold tracking-wide text-white backdrop-blur-sm">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
+      <div className="relative z-10 w-full px-[clamp(24px,5vw,64px)] pb-[clamp(48px,8vw,88px)]">
+        <div className="mb-5 flex items-start gap-3">
+          <span className="mt-[7px] h-px w-6 shrink-0 bg-amber sm:mt-[9px] sm:w-10" />
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-amber sm:text-xs sm:tracking-[0.16em]">
             A boutique private tour operator
           </span>
-          <h1 className="text-[clamp(2.1rem,5vw,3.4rem)] font-semibold leading-[1.08] tracking-tight text-white">
-            Morocco, from the Atlas passes to the Sahara dunes.
-          </h1>
-          <p className="mt-4 text-[1.05rem] text-white/85">
-            Small, high-touch journeys through the imperial cities, the High Atlas and the Erg
-            Chebbi Sahara — no fixed groups, no rushing, no itinerary sold off a shelf.
-          </p>
-
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a
-              href="#tours"
-              className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,.6)] hover:bg-terracotta-d"
-            >
-              Explore tours
-            </a>
-            <a
-              href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 rounded-full bg-[#1f7a4d] px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-[#186139]"
-            >
-              Message us on WhatsApp
-            </a>
-          </div>
         </div>
 
-        <div className="mt-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
+        <h1 className="max-w-[16ch] font-serif text-[clamp(2.3rem,5.6vw,4.2rem)] font-semibold leading-[1.03] tracking-tight text-white">
+          Morocco, from the Atlas passes to the Sahara dunes.
+        </h1>
+        <p className="mt-5 max-w-[54ch] text-[1.06rem] text-white/80">
+          Small, high-touch journeys through the imperial cities, the High Atlas and the Erg
+          Chebbi Sahara — no fixed groups, no rushing, no itinerary sold off a shelf.
+        </p>
+
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <a
+            href="#tours"
+            className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,.6)] hover:bg-terracotta-d"
+          >
+            Explore tours
+          </a>
+          <a
+            href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-2 rounded-full bg-[#1f7a4d] px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-[#186139]"
+          >
+            Message us on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      {/* numbered slide index, bottom-right */}
+      <div className="absolute bottom-[clamp(20px,4vw,32px)] right-[clamp(20px,4vw,32px)] z-10 hidden text-right sm:block">
+        <div className="mb-2 font-serif text-sm text-white/70">
+          <span className="text-base font-semibold text-white">{String(active + 1).padStart(2, "0")}</span>
+          {" / "}
+          {String(SLIDES.length).padStart(2, "0")}
+        </div>
+        <div className="mb-2 flex justify-end gap-1.5">
+          {SLIDES.map((s, i) => (
+            <button
+              key={s.src}
+              aria-label={`Show slide: ${s.tag}`}
+              aria-current={i === active}
+              onClick={() => setActive(i)}
+              className={`h-1 rounded-full transition-all ${
+                i === active ? "w-8 bg-amber" : "w-3 bg-white/40 hover:bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="text-xs font-semibold uppercase tracking-wide text-white/70">
           {SLIDES[active].tag}
         </div>
       </div>

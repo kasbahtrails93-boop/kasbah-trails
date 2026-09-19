@@ -76,13 +76,3 @@
 .faq-item[open] summary::after {
   content: "\2013";
 }
-
-/* hero slider story-style progress bar */
-@keyframes hero-progress {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
