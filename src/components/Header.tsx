@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { waLink } from "@/lib/wa";
 
 const LINKS = [
   { href: "/tours", label: "Tours" },
@@ -62,14 +61,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
-            target="_blank"
-            rel="noopener"
-            className="max-[940px]:hidden inline-flex items-center gap-2 rounded-full border border-line px-4 py-2.5 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
-          >
-            WhatsApp
-          </a>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-sm font-bold text-espresso-2 shadow-[0_10px_22px_-12px_rgba(206,138,37,.9)] hover:bg-amber-d"
