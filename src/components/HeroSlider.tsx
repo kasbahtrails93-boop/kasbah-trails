@@ -29,9 +29,23 @@ const SLIDES = [
 
 const AUTOPLAY_MS = 6000;
 
+function withPreload(prev: Set<number>, index: number): Set<number> {
+  if (prev.has(index)) return prev;
+  const copy = new Set(prev);
+  copy.add(index);
+  return copy;
+}
+
 export default function HeroSlider() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  // Only the current slide + the next one are ever mounted (and therefore
+  // downloaded), instead of all 4 hero images competing for bandwidth on
+  // first paint. Each slide gets a full AUTOPLAY_MS dwell time on the
+  // previous slide to load in the background before it's due. Only ever
+  // updated from callbacks (the timer below, the dot onClick), never
+  // synchronously in an effect body or read/written via a ref in render.
+  const [seen, setSeen] = useState<Set<number>>(() => new Set([0, 1 % SLIDES.length]));
   const reducedMotion = useRef(false);
 
   useEffect(() => {
@@ -40,11 +54,13 @@ export default function HeroSlider() {
 
   useEffect(() => {
     if (paused || reducedMotion.current) return;
-    const id = setInterval(() => {
-      setActive((i) => (i + 1) % SLIDES.length);
+    const id = setTimeout(() => {
+      const next = (active + 1) % SLIDES.length;
+      setActive(next);
+      setSeen((prev) => withPreload(prev, (next + 1) % SLIDES.length));
     }, AUTOPLAY_MS);
-    return () => clearInterval(id);
-  }, [paused]);
+    return () => clearTimeout(id);
+  }, [active, paused]);
 
   return (
     <section
@@ -60,16 +76,18 @@ export default function HeroSlider() {
           }`}
           aria-hidden={i !== active}
         >
-          <Image
-            src={s.src}
-            alt={s.alt}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className={`object-cover ${
-              i === active ? "scale-105" : "scale-100"
-            } transition-transform duration-[7000ms] ease-out motion-reduce:scale-100 motion-reduce:transition-none`}
-          />
+          {seen.has(i) && (
+            <Image
+              src={s.src}
+              alt={s.alt}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className={`object-cover ${
+                i === active ? "scale-105" : "scale-100"
+              } transition-transform duration-[7000ms] ease-out motion-reduce:scale-100 motion-reduce:transition-none`}
+            />
+          )}
         </div>
       ))}
 
@@ -127,7 +145,10 @@ export default function HeroSlider() {
               key={s.src}
               aria-label={`Show slide: ${s.tag}`}
               aria-current={i === active}
-              onClick={() => setActive(i)}
+              onClick={() => {
+                setActive(i);
+                setSeen((prev) => withPreload(prev, i));
+              }}
               className={`h-1 rounded-full transition-all ${
                 i === active ? "w-8 bg-amber" : "w-3 bg-white/40 hover:bg-white/70"
               }`}
