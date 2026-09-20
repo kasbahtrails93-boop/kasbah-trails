@@ -64,7 +64,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative isolate flex h-[86vh] min-h-[560px] w-full items-end overflow-hidden bg-espresso-2 text-white sm:h-[88vh]"
+      className="relative isolate h-[64vh] min-h-[460px] w-full overflow-hidden bg-neutral-900 text-white sm:h-[70vh]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -91,33 +91,30 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* cinematic vignette: darkest where the text sits, clear toward the far corner */}
-      <div className="absolute inset-0 bg-[radial-gradient(120%_100%_at_0%_100%,rgba(20,10,4,.88)_0%,rgba(20,10,4,.45)_38%,rgba(20,10,4,.08)_68%)]" />
-      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/35 to-transparent" />
+      {/* neutral dark wash, centered on the text — no brand color tint, just enough for contrast */}
+      <div className="absolute inset-0 bg-[radial-gradient(60%_75%_at_50%_50%,rgba(0,0,0,.42)_0%,rgba(0,0,0,.12)_60%,rgba(0,0,0,0)_85%)]" />
 
-      {/* inset gallery frame */}
-      <div className="pointer-events-none absolute inset-3 rounded-2xl border border-white/25 sm:inset-4" />
-
-      <div className="relative z-10 w-full px-[clamp(24px,5vw,64px)] pb-[clamp(48px,8vw,88px)]">
-        <div className="mb-5 flex items-start gap-3">
-          <span className="mt-[7px] h-px w-6 shrink-0 bg-amber sm:mt-[9px] sm:w-10" />
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-amber sm:text-xs sm:tracking-[0.16em]">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-[clamp(20px,5vw,64px)] text-center">
+        <div className="mb-4 flex items-center gap-2.5">
+          <span className="h-px w-6 bg-amber" />
+          <span className="text-[13px] font-semibold text-white/75 sm:text-sm">
             Bespoke, private Morocco journeys
           </span>
+          <span className="h-px w-6 bg-amber" />
         </div>
 
-        <h1 className="max-w-[16ch] font-serif text-[clamp(2.3rem,5.6vw,4.2rem)] font-semibold leading-[1.03] tracking-tight text-white">
+        <h1 className="max-w-[18ch] font-serif text-[clamp(2rem,4.6vw,3.4rem)] font-semibold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,.5)]">
           Morocco, from the Atlas passes to the Sahara dunes.
         </h1>
-        <p className="mt-5 max-w-[54ch] text-[1.06rem] text-white/80">
+        <p className="mt-4 max-w-[52ch] text-[.98rem] text-white/85 sm:text-base">
           Privately guided journeys through the imperial cities, over the High Atlas and into the
           Erg Chebbi dunes — unhurried, and shaped entirely around you.
         </p>
 
-        <div className="mt-7 flex flex-wrap items-center gap-3">
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#tours"
-            className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,.6)] hover:bg-terracotta-d"
+            className="inline-flex items-center gap-2 rounded-lg bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white transition-colors duration-200 hover:bg-terracotta-d"
           >
             Explore tours
           </a>
@@ -125,38 +122,37 @@ export default function HeroSlider() {
             href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-2 rounded-full bg-[#1f7a4d] px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-[#186139]"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/50 bg-white/5 px-6 py-3.5 text-[.98rem] font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/15"
           >
             Message us on WhatsApp
           </a>
         </div>
-      </div>
 
-      {/* numbered slide index, bottom-right */}
-      <div className="absolute bottom-[clamp(20px,4vw,32px)] right-[clamp(20px,4vw,32px)] z-10 hidden text-right sm:block">
-        <div className="mb-2 font-serif text-sm text-white/70">
-          <span className="text-base font-semibold text-white">{String(active + 1).padStart(2, "0")}</span>
-          {" / "}
-          {String(SLIDES.length).padStart(2, "0")}
-        </div>
-        <div className="mb-2 flex justify-end gap-1.5">
-          {SLIDES.map((s, i) => (
-            <button
-              key={s.src}
-              aria-label={`Show slide: ${s.tag}`}
-              aria-current={i === active}
-              onClick={() => {
-                setActive(i);
-                setSeen((prev) => withPreload(prev, i));
-              }}
-              className={`h-1 rounded-full transition-all ${
-                i === active ? "w-8 bg-amber" : "w-3 bg-white/40 hover:bg-white/70"
-              }`}
-            />
-          ))}
-        </div>
-        <div className="text-xs font-semibold uppercase tracking-wide text-white/70">
-          {SLIDES[active].tag}
+        <div className="mt-9 flex items-center gap-3">
+          <span className="font-serif text-sm tabular-nums text-white/60">
+            <span className="text-base font-semibold text-white">
+              {String(active + 1).padStart(2, "0")}
+            </span>
+            {" / "}
+            {String(SLIDES.length).padStart(2, "0")}
+          </span>
+          <div className="flex gap-1.5">
+            {SLIDES.map((s, i) => (
+              <button
+                key={s.src}
+                aria-label={`Show slide: ${s.tag}`}
+                aria-current={i === active}
+                onClick={() => {
+                  setActive(i);
+                  setSeen((prev) => withPreload(prev, i));
+                }}
+                className={`h-1 rounded-full transition-all ${
+                  i === active ? "w-8 bg-amber" : "w-3 bg-white/40 hover:bg-white/70"
+                }`}
+              />
+            ))}
+          </div>
+          <span className="text-[13px] text-white/60">{SLIDES[active].tag}</span>
         </div>
       </div>
     </section>

@@ -1,26 +1,26 @@
 const STEPS = [
   {
     title: "Tell us your dates",
-    body: "Message us with when you're coming, how long you have and what you'd love to see.",
+    body: "Message us with when you're coming, how long you have and what you'd love to see — even if all you've got is a rough shape and a handful of names you've read about.",
   },
   {
     title: "Get a draft itinerary",
-    body: "We send back a day-by-day plan with routes, riads and a clear price — yours to tweak.",
+    body: "We send back a day-by-day plan with routes, riads and a clear price, built around what you told us — move things around until it's exactly the trip you want.",
   },
   {
     title: "Confirm with a deposit",
-    body: "Happy with it? A small deposit locks in your dates and vehicle. Balance on arrival.",
+    body: "Happy with it? A small deposit locks in your dates, your vehicle and your driver-guide. The balance isn't due until you arrive.",
   },
   {
     title: "We meet you on day one",
-    body: "Your driver-guide greets you at the airport or riad, and the road is yours.",
+    body: "Your driver-guide is waiting at the airport or your riad with your name on a sign, and from there the road is yours.",
   },
 ];
 
 export default function Process() {
   return (
-    <section id="how" className="bg-sand-2">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(56px,8vw,104px)]">
+    <section id="how" className="scroll-mt-24 bg-sand-2">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
         <div className="text-center">
           <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">
             Simple from the first message
@@ -29,7 +29,7 @@ export default function Process() {
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
-            <div key={s.title} className="rounded-2xl bg-card p-6 shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
+            <div key={s.title} className="rounded-lg border border-line bg-card p-6">
               <div className="mb-3 font-serif text-3xl font-semibold text-amber-d">{i + 1}</div>
               <h3 className="mb-1.5 font-serif text-lg font-semibold">{s.title}</h3>
               <p className="text-sm text-muted">{s.body}</p>
@@ -39,7 +39,7 @@ export default function Process() {
         <div className="mt-9 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-terracotta-d"
+            className="inline-flex items-center gap-2 rounded-lg bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-terracotta-d"
           >
             Start planning
           </a>

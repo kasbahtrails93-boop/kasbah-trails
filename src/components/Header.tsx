@@ -6,10 +6,10 @@ import Image from "next/image";
 import { CONTACT } from "@/lib/data";
 
 const LINKS = [
-  { href: "/#destinations", label: "Destinations" },
-  { href: "/#why", label: "About" },
+  { href: "/destinations", label: "Destinations" },
+  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const TOUR_CITIES = ["Marrakech", "Fes", "Casablanca", "Tangier"];
@@ -101,7 +101,7 @@ export default function Header() {
                 </svg>
               </Link>
               <div className="invisible absolute left-0 top-full w-64 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 max-[940px]:hidden">
-                <div className="rounded-2xl border border-line bg-card p-2 shadow-[0_18px_40px_-24px_rgba(63,33,9,.5)]">
+                <div className="rounded-lg border border-line bg-card p-2 shadow-[0_10px_24px_-16px_rgba(63,33,9,.35)]">
                   {TOUR_CITIES.map((c) => (
                     <Link
                       key={c}
@@ -136,8 +136,8 @@ export default function Header() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="/#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-sm font-bold text-espresso-2 shadow-[0_10px_22px_-12px_rgba(206,138,37,.9)] hover:bg-amber-d"
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-lg bg-amber px-5 py-2.5 text-sm font-bold text-espresso-2 hover:bg-amber-d"
             >
               Plan my trip
             </Link>

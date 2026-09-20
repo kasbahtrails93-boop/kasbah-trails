@@ -18,8 +18,8 @@ const POINTS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-sand-2">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(56px,8vw,104px)]">
+    <section id="contact" className="scroll-mt-24 bg-sand-2">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
             <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">Let&apos;s plan it</p>
@@ -52,7 +52,7 @@ export default function Contact() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-line bg-card p-7 shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)] sm:p-9">
+          <div className="rounded-lg border border-line bg-card p-7 sm:p-9">
             <p className="mb-1 text-sm font-bold text-espresso">Reach us directly</p>
             <p className="mb-6 text-sm text-muted">Whichever&apos;s easiest — we&apos;re on all three.</p>
 
@@ -61,7 +61,7 @@ export default function Contact() {
                 href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
                 target="_blank"
                 rel="noopener"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#1f7a4d] px-6 py-3.5 text-[.98rem] font-bold text-white shadow-[0_10px_22px_-12px_rgba(31,122,77,.7)] hover:bg-[#186139]"
+                className="flex items-center justify-center gap-2 rounded-lg bg-olive px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-olive-d"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z" />
@@ -71,7 +71,7 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-3">
                 <a
                   href={`tel:${CONTACT.phoneTel}`}
-                  className="flex items-center justify-center gap-2 rounded-full border border-line bg-sand px-4 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-line bg-sand px-4 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 12a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z" />
@@ -80,7 +80,7 @@ export default function Contact() {
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="flex items-center justify-center gap-2 rounded-full border border-line bg-sand px-4 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-line bg-sand px-4 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="2" y="4" width="20" height="16" rx="2" />

@@ -6,7 +6,7 @@ export default function TableOfContents({ blocks }: { blocks: BlogBlock[] }) {
   if (headings.length < 2) return null;
 
   return (
-    <nav aria-label="Table of contents" className="mb-8 rounded-2xl border border-line bg-sand-2 p-5">
+    <nav aria-label="Table of contents" className="mb-8 rounded-lg border border-line bg-sand-2 p-5">
       <p className="mb-3 text-xs font-bold tracking-wide text-muted">In this guide</p>
       <ol className="space-y-1.5 text-sm">
         {headings.map((h) => (

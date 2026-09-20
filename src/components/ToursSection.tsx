@@ -43,7 +43,7 @@ function Chip({
   return (
     <button
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${
         active
           ? "border-terracotta bg-terracotta text-white"
           : "border-line bg-card text-ink hover:border-terracotta hover:text-terracotta"
@@ -73,8 +73,8 @@ export default function ToursSection({
   );
 
   return (
-    <section id="tours">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(32px,6vw,64px)]">
+    <section id="tours" className="scroll-mt-24">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(24px,4vw,44px)]">
         <div className="flex flex-wrap gap-8">
           <div>
             <span className="mb-2 block text-xs font-bold tracking-wide text-muted">Starting from</span>
@@ -106,7 +106,7 @@ export default function ToursSection({
           {list.length ? (
             list.map((t) => <TourCard key={t.id} tour={t} />)
           ) : (
-            <div className="col-span-full rounded-2xl border border-dashed border-line p-10 text-center text-muted">
+            <div className="col-span-full rounded-lg border border-dashed border-line p-10 text-center text-muted">
               No tours match those filters yet — try widening your search, or{" "}
               <a href="#contact" className="text-terracotta underline">
                 ask us for a custom trip

@@ -59,18 +59,18 @@ export default function TourItinerary({ tour }: { tour: Tour }) {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 rounded-2xl border border-line bg-sand-2 p-6">
+      <div className="flex flex-wrap gap-3 rounded-lg border border-line bg-sand-2 p-6">
         <a
           href={waLink(`Hi Kasbah Trails, I'd like a quote for the ${tour.title}.`)}
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-2 rounded-full bg-[#1f7a4d] px-6 py-3 text-sm font-bold text-white hover:bg-[#186139]"
+          className="inline-flex items-center gap-2 rounded-lg bg-olive px-6 py-3 text-sm font-bold text-white hover:bg-olive-d"
         >
           Get a quote on WhatsApp
         </a>
         <a
           href={`mailto:hello@kasbahtrails.com?subject=${encodeURIComponent("Enquiry: " + tour.title)}`}
-          className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-6 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
+          className="inline-flex items-center gap-2 rounded-lg border border-line bg-card px-6 py-3 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
         >
           Enquire by email
         </a>

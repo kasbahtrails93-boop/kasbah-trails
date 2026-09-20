@@ -113,7 +113,7 @@ export default async function TourDetailPage({
         <p className="mb-8 text-[1.15rem] leading-relaxed text-ink">{tour.blurb}</p>
         <TourItinerary tour={tour} />
 
-        <div className="mt-10 rounded-2xl border border-dashed border-line p-6 text-center text-sm text-muted">
+        <div className="mt-10 rounded-lg border border-dashed border-line p-6 text-center text-sm text-muted">
           Want this route adjusted? Message us on{" "}
           <a
             href={waLink(`Hi Kasbah Trails, I'd like to tweak the ${tour.title}.`)}

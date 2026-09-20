@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import BackToTop from "@/components/BackToTop";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -145,6 +146,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <WhatsAppFloat />
+        <BackToTop />
       </body>
     </html>
   );

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { DEST } from "@/lib/data";
 
+// The homepage teaser deliberately shows a curated 6, not the full catalog —
+// see /destinations for all of them, same pattern as FeaturedTours vs /tours.
+const FEATURED_NAMES = ["Marrakech", "The Sahara", "Fes", "Chefchaouen", "Aït Ben Haddou", "Essaouira"];
+
 const PHOTOS: Record<string, { src: string; alt: string }> = {
   Marrakech: {
     src: "/images/destinations/marrakech-jemaa-el-fnaa-sunset.webp",
@@ -26,12 +30,22 @@ const PHOTOS: Record<string, { src: string; alt: string }> = {
     src: "/images/destinations/essaouira-skala-fishing-port.webp",
     alt: "The Skala fortress and blue fishing boats in the harbour of Essaouira, Morocco",
   },
+  Casablanca: {
+    src: "/images/pool/casablanca-corniche-lighthouse.webp",
+    alt: "The lighthouse and Atlantic coastline along Casablanca's corniche, Morocco",
+  },
+  Tangier: {
+    src: "/images/hero/tangier-corniche-coast.webp",
+    alt: "An aerial view of Tangier's coastal corniche road curving along the Mediterranean, Morocco",
+  },
 };
 
 export default function Destinations() {
+  const featured = FEATURED_NAMES.map((n) => DEST.find((d) => d.n === n)!).filter(Boolean);
+
   return (
-    <section id="destinations">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(56px,8vw,104px)]">
+    <section id="destinations" className="scroll-mt-24">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
         <div className="text-center">
           <p className="mb-2.5 text-sm font-bold tracking-wide text-amber-d">Where you&apos;ll go</p>
           <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Places worth the drive</h2>
@@ -41,13 +55,13 @@ export default function Destinations() {
           </p>
         </div>
         <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-3">
-          {DEST.map((d) => {
+          {featured.map((d) => {
             const photo = PHOTOS[d.n];
             return (
               <a
                 key={d.n}
                 href="#tours"
-                className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]"
+                className="group relative block aspect-[4/3] overflow-hidden rounded-lg"
               >
                 {photo && (
                   <Image

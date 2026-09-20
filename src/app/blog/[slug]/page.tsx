@@ -117,14 +117,14 @@ export default async function BlogPostPage({
         <TableOfContents blocks={post.blocks} />
         <BlogBlocks blocks={post.blocks} />
 
-        <div className="mt-10 rounded-2xl border border-line bg-sand-2 p-6">
+        <div className="mt-10 rounded-lg border border-line bg-sand-2 p-6">
           <p className="text-ink">
             Ready to see this in an itinerary?{" "}
             <Link href="/tours" className="font-semibold text-terracotta underline">
               Browse all 33 private Morocco tours
             </Link>{" "}
             or message us directly with your dates on{" "}
-            <Link href="/#contact" className="font-semibold text-terracotta underline">
+            <Link href="/contact" className="font-semibold text-terracotta underline">
               WhatsApp
             </Link>{" "}
             for a route built around this trip.

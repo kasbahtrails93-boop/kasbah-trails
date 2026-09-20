@@ -7,21 +7,19 @@ import Destinations from "@/components/Destinations";
 import BlogTeaser from "@/components/BlogTeaser";
 import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
-import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <>
       <HeroSlider />
       <TrustStrip />
+      <Why />
       <FeaturedTours />
       <Process />
-      <Why />
       <Destinations />
-      <BlogTeaser />
       <Reviews />
+      <BlogTeaser />
       <Faq />
-      <Contact />
     </>
   );
 }

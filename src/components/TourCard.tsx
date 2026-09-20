@@ -8,7 +8,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
   const photo = pickPhoto(tour.scene, tour.id);
 
   return (
-    <article className="overflow-hidden rounded-2xl border border-line bg-card shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]">
+    <article className="overflow-hidden rounded-lg border border-line bg-card">
       <Link href={`/tours/${tour.id}`} className="relative block aspect-[16/10]">
         <Image
           src={photo.src}
@@ -19,10 +19,10 @@ export default function TourCard({ tour }: { tour: Tour }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
         <div className="absolute left-3 top-3 flex gap-2">
-          <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-espresso">
+          <span className="rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-espresso">
             {tour.days} days
           </span>
-          <span className="rounded-full bg-espresso/85 px-2.5 py-1 text-xs font-bold text-white">
+          <span className="rounded-lg bg-espresso/85 px-2.5 py-1 text-xs font-bold text-white">
             {tour.cat}
           </span>
         </div>
@@ -44,7 +44,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
         <div className="flex flex-wrap items-center gap-2">
           <Link
             href={`/tours/${tour.id}`}
-            className="rounded-full border border-line px-4 py-2 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
+            className="rounded-lg border border-line px-4 py-2 text-sm font-bold text-espresso hover:border-terracotta hover:text-terracotta"
           >
             View itinerary
           </Link>
@@ -52,7 +52,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
             href={waLink(`Hi Kasbah Trails, I'd like details on the ${tour.title}.`)}
             target="_blank"
             rel="noopener"
-            className="rounded-full bg-[#1f7a4d] px-4 py-2 text-sm font-bold text-white hover:bg-[#186139]"
+            className="rounded-lg bg-olive px-4 py-2 text-sm font-bold text-white hover:bg-olive-d"
           >
             Ask on WhatsApp
           </a>

@@ -326,7 +326,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "5-casa-mar",
-    "title": "5 Days Tour from Casablanca to Marrakech",
+    "title": "5 Days from Casablanca to Marrakech — Chefchaouen & Fes",
     "days": 5,
     "from": "Casablanca",
     "to": "Casablanca",
@@ -410,7 +410,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "6-casa-mar",
-    "title": "6 Day Private Tour from Casablanca to Marrakech",
+    "title": "6 Days from Casablanca to Marrakech — Rabat & the Gorges",
     "days": 6,
     "from": "Casablanca",
     "to": "Marrakech",
@@ -652,37 +652,37 @@ export const TOURS: Tour[] = [
     "itin": [
       {
         "t": "Marrakech → Aït Ben Haddou → Ouarzazate",
-        "d": "Over the Tizi n'Tichka to the ksar of Aït Ben Haddou, then a relaxed afternoon in Ouarzazate — the Taourirt Kasbah and the film studios — for the night."
+        "d": "Climb the Tizi n'Tichka pass through Berber villages clinging to the High Atlas, then explore the earthen ksar of Aït Ben Haddou before a relaxed afternoon in Ouarzazate — the Taourirt Kasbah and the old film studios — for the night."
       },
       {
         "t": "Ouarzazate → Skoura → Valley of Roses → Dadès",
-        "d": "Explore the Skoura oasis and its kasbahs, follow the Valley of Roses and settle into the Dadès Gorge, with an evening walk among the rock formations."
+        "d": "Wander the palm groves and kasbahs of the Skoura oasis, then follow the Valley of Roses toward Kalaat M'Gouna before settling into the Dadès Gorge for the night, with time for an evening walk among its folded rock formations."
       },
       {
         "t": "Dadès → Todgha Gorge → Merzouga",
-        "d": "A morning in the towering Todgha Gorge, then east to Merzouga for a sunset camel trek into the Erg Chebbi dunes and a night at camp."
+        "d": "A morning walk beneath the towering limestone walls of Todgha Gorge, then east via Tinghir and Rissani to Merzouga. As the light turns gold, ride a camel into the Erg Chebbi dunes for dinner and a first night at a desert camp."
       },
       {
         "t": "A full day in the dunes",
-        "d": "Sunrise over the sand, then a 4x4 day — Khamlia's Gnaoua musicians, a nomad family, sandboarding and desert viewpoints — before a second night in the Sahara."
+        "d": "Watch the sun rise over the dunes, then spend the day by 4x4 — Khamlia's Gnaoua musicians, tea with a nomad family, a stretch of sandboarding and wide desert viewpoints — before a second night in the Sahara."
       },
       {
         "t": "Merzouga → Rissani → Draa Valley → Zagora",
-        "d": "Through the market at Rissani and across the Nkob pass into the long palm oasis of the Draa Valley, overnighting near Zagora."
+        "d": "Browse the market stalls of Rissani, then cross the Nkob pass into the long palm oasis of the Draa Valley, tracing its kasbahs and mud-brick villages south to overnight near Zagora, gateway to the old caravan routes."
       },
       {
         "t": "Zagora → Agdz → Ouarzazate → Aït Ben Haddou",
-        "d": "Follow the Draa's kasbahs through Agdz back to Ouarzazate, ending the day at Aït Ben Haddou for golden hour."
+        "d": "Follow the Draa Valley's string of kasbahs north through Agdz back to Ouarzazate, then finish the day at Aït Ben Haddou as the late sun turns its earthen towers deep red — the same ksar from day one, seen this time in reverse light."
       },
       {
         "t": "Telouet Kasbah → Marrakech",
-        "d": "Take the old caravan road via the dramatic Telouet Kasbah before crossing the Atlas back to Marrakech."
+        "d": "Detour along the old caravan road to the crumbling, still-ornate Telouet Kasbah, once the stronghold of the Glaoui pashas, before the final climb back over the High Atlas into Marrakech."
       }
     ]
   },
   {
     "id": "7-tan-mar",
-    "title": "7 Days from Tangier to Marrakech",
+    "title": "7 Days from Tangier to Marrakech — Chefchaouen & the Sahara",
     "days": 7,
     "from": "Tangier",
     "to": "Marrakech",
@@ -778,7 +778,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "8-tan-mar",
-    "title": "8 Days from Tangier to Marrakech",
+    "title": "8 Days from Tangier to Marrakech — The Rif & Atlas Kasbahs",
     "days": 8,
     "from": "Tangier",
     "to": "Marrakech",
@@ -848,41 +848,41 @@ export const TOURS: Tour[] = [
     "itin": [
       {
         "t": "Marrakech → Aït Ben Haddou → Ouarzazate → Dadès",
-        "d": "Cross the High Atlas, explore Aït Ben Haddou and the kasbah road, and overnight in the Dadès Valley."
+        "d": "Climb the Tizi n'Tichka pass over the High Atlas, stop at the earthen ksar of Aït Ben Haddou and follow the Road of a Thousand Kasbahs through Ouarzazate, ending the day in the Dadès Valley among its folded rock formations."
       },
       {
         "t": "Dadès → Todgha Gorge → Merzouga",
-        "d": "Walk the Todgha Gorge, then ride camels into the Erg Chebbi dunes for a night at your Sahara camp."
+        "d": "A morning walk beneath the towering limestone walls of Todgha Gorge, then on through Tinghir and Rissani to Merzouga. As the light softens, ride a camel into the Erg Chebbi dunes for dinner and a night at a desert camp."
       },
       {
         "t": "Merzouga → Midelt → Azrou → Fes",
-        "d": "Sunrise in the dunes, then north through the Ziz Valley and the Middle Atlas cedar forests — with their Barbary macaques — to Fes."
+        "d": "Watch the sunrise over the dunes, then the long drive north through the palm-lined Ziz Valley and Midelt into the Middle Atlas cedar forests, where wild Barbary macaques forage by the roadside, arriving in Fes by evening."
       },
       {
         "t": "A full day in Fes",
-        "d": "A local guide leads you through the medieval medina: the tanneries, the Al-Qarawiyyin university, the artisan quarters and the great gates."
+        "d": "A local guide leads you through the medieval medina — the Chouara tanneries, the Al-Qarawiyyin mosque and university, the working artisan quarters and the carved gates of Nejjarine Square — one of the best-preserved old cities in the world."
       },
       {
         "t": "Fes → Chefchaouen",
-        "d": "Cross the Rif Mountains to Chefchaouen and spend the afternoon wandering its cobalt-blue lanes."
+        "d": "Cross into the Rif Mountains for Chefchaouen, spending the afternoon wandering its cobalt-blue lanes around Place Outa el-Hammam and the red-walled kasbah as the light turns gold."
       },
       {
         "t": "Chefchaouen → Volubilis → Rabat",
-        "d": "Visit the Roman ruins of Volubilis en route to the capital, Rabat, for its kasbah and seafront."
+        "d": "Descend from the Rif to the Roman ruins of Volubilis, still scattered with mosaics, then continue to the capital, Rabat, for the Hassan Tower and the whitewashed Kasbah of the Udayas above the Atlantic."
       },
       {
         "t": "Rabat → Casablanca → Marrakech",
-        "d": "See the vast Hassan II Mosque in Casablanca, then drive south to Marrakech for the evening."
+        "d": "A short run down the coast to Casablanca for the vast Hassan II Mosque, built out over the Atlantic, then the drive south to Marrakech, arriving as the evening crowds gather at Jemaa el-Fnaa."
       },
       {
         "t": "Marrakech medina → departure",
-        "d": "A guided morning in the Marrakech medina — the souks, the Bahia Palace and Jemaa el-Fnaa — before your onward journey."
+        "d": "A guided morning through the Marrakech medina — the souks, the carved courtyards of the Bahia Palace and a last pass through Jemaa el-Fnaa — before your onward journey."
       }
     ]
   },
   {
     "id": "9-tan-mar",
-    "title": "9 Days from Tangier to Marrakech",
+    "title": "9 Days from Tangier to Marrakech — Mountains & the Sahara",
     "days": 9,
     "from": "Tangier",
     "to": "Marrakech",
@@ -1012,43 +1012,43 @@ export const TOURS: Tour[] = [
     "itin": [
       {
         "t": "Marrakech → Aït Ben Haddou → Ouarzazate",
-        "d": "Over the Atlas to the ksar of Aït Ben Haddou and the kasbahs of Ouarzazate."
+        "d": "Climb the Tizi n'Tichka pass over the High Atlas to the earthen ksar of Aït Ben Haddou, then on to Ouarzazate — Morocco's film capital — for the Taourirt Kasbah and the night."
       },
       {
         "t": "Ouarzazate → Dadès → Todgha → Merzouga",
-        "d": "Through both gorges to Merzouga, then a camel trek into the dunes and a night at camp."
+        "d": "Follow the kasbah road through the Dadès Gorge's folded rock formations to Todgha Gorge for a canyon walk, then on to Merzouga. As the sun sets, a camel trek carries you into the Erg Chebbi dunes for dinner and a night at camp."
       },
       {
         "t": "Merzouga → Midelt → Azrou → Fes",
-        "d": "Sunrise, then north through the Ziz Valley and cedar forests to Fes."
+        "d": "Watch the sunrise over the dunes, then the long drive north through the Ziz Valley and Midelt into the Middle Atlas cedar forests, home to wild Barbary macaques, arriving in Fes by evening."
       },
       {
         "t": "A full day in Fes",
-        "d": "A guided walk through the medieval medina — tanneries, madrasas and the Al-Qarawiyyin."
+        "d": "A local guide leads you through the medieval medina — the Chouara tanneries, the Bou Inania madrasa, the Al-Qarawiyyin mosque and university and a working pottery village."
       },
       {
         "t": "Fes → Chefchaouen",
-        "d": "Across the Rif to the blue-washed lanes of Chefchaouen for the afternoon."
+        "d": "Cross the Rif Mountains to Chefchaouen, spending the afternoon among its blue-washed lanes and the red-walled kasbah as evening settles in."
       },
       {
         "t": "Chefchaouen → Volubilis → Rabat",
-        "d": "Roman Volubilis and imperial Meknes en route to the capital, Rabat."
+        "d": "Descend from the Rif to the Roman ruins of Volubilis, then imperial Meknes and its monumental Bab Mansour gate, before continuing to the capital, Rabat, for the night."
       },
       {
         "t": "Rabat → Casablanca",
-        "d": "The capital's landmarks, then Casablanca and the great Hassan II Mosque on the ocean."
+        "d": "The Hassan Tower and the Kasbah of the Udayas in Rabat, then south to Casablanca for the vast Hassan II Mosque, built out over the Atlantic."
       },
       {
         "t": "Casablanca → El Jadida → Essaouira",
-        "d": "Down the Atlantic coast to the breezy port city of Essaouira for the night."
+        "d": "Follow the Atlantic coast south through the Portuguese-built ramparts of El Jadida to the breezy port city of Essaouira for the night."
       },
       {
         "t": "Essaouira → Marrakech",
-        "d": "A morning in Essaouira's ramparts and medina, then inland to Marrakech."
+        "d": "A slow morning among Essaouira's Skala ramparts, fishing harbour and medina, then the drive inland through argan forest back to Marrakech."
       },
       {
         "t": "Marrakech medina → departure",
-        "d": "A guided morning in Marrakech — souks, palaces and Jemaa el-Fnaa — before you fly home."
+        "d": "A guided morning through the Marrakech medina — the souks, the Bahia Palace's carved courtyards and a last pass through Jemaa el-Fnaa — before your onward flight."
       }
     ]
   },
@@ -1178,7 +1178,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "11-casa",
-    "title": "11 Days Private Tour from Casablanca",
+    "title": "11 Days from Casablanca — Essaouira & the Sahara",
     "days": 11,
     "from": "Casablanca",
     "to": "Casablanca",
@@ -1370,7 +1370,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "12-mar",
-    "title": "12 Days Tour from Marrakech",
+    "title": "12 Days from Marrakech — The Unhurried Grand Tour",
     "days": 12,
     "from": "Marrakech",
     "to": "Marrakech",
@@ -1388,57 +1388,57 @@ export const TOURS: Tour[] = [
     "itin": [
       {
         "t": "Marrakech city",
-        "d": "A guided introduction to the Red City — the souks, the Koutoubia, the Bahia Palace and Jemaa el-Fnaa at dusk."
+        "d": "A guided introduction to the Red City — the maze of the souks, the Koutoubia minaret, the carved courtyards of the Bahia Palace and the food stalls of Jemaa el-Fnaa as the sun goes down."
       },
       {
         "t": "Marrakech → Aït Ben Haddou → Ouarzazate",
-        "d": "Over the Tizi n'Tichka to the ksar of Aït Ben Haddou and the kasbahs of Ouarzazate."
+        "d": "Climb the Tizi n'Tichka pass through Berber villages clinging to the High Atlas, explore the earthen ksar of Aït Ben Haddou, then settle into Ouarzazate — Morocco's film capital — for the night."
       },
       {
         "t": "Ouarzazate → Skoura → Dadès",
-        "d": "The Skoura oasis and the Valley of Roses, ending in the Dadès Gorge."
+        "d": "Wander the palm groves and kasbahs of the Skoura oasis, follow the Valley of Roses toward Kalaat M'Gouna, and settle into the Dadès Gorge for the night among its folded rock formations."
       },
       {
         "t": "Dadès → Todgha → Merzouga",
-        "d": "Todgha Gorge, then a camel trek into the Erg Chebbi dunes for the night."
+        "d": "A morning walk beneath the towering limestone walls of Todgha Gorge, then east via Tinghir and Rissani to Merzouga. As the light turns gold, a camel trek carries you into the Erg Chebbi dunes for dinner and a first night at camp."
       },
       {
         "t": "A full day in the Sahara",
-        "d": "Sunrise, a 4x4 excursion, Khamlia music and nomad tea, then a second desert night."
+        "d": "Watch the sunrise over the dunes, then a full day by 4x4 — Khamlia's Gnaoua musicians, tea with a nomad family and wide desert viewpoints — before a second, unhurried night in the Sahara."
       },
       {
         "t": "Merzouga → Midelt → Azrou → Fes",
-        "d": "North through the Ziz Valley and the cedar forests to Fes."
+        "d": "Drive north through the palm-lined Ziz Valley and Midelt into the Middle Atlas cedar forests, where wild Barbary macaques forage by the roadside, arriving in Fes by evening."
       },
       {
         "t": "A full day in Fes",
-        "d": "A guided day in the medieval medina — tanneries, madrasas and artisan quarters."
+        "d": "A local guide leads you through the medieval medina — the Chouara tanneries, the Bou Inania madrasa, the Al-Qarawiyyin mosque and university and the working artisan quarters."
       },
       {
         "t": "Fes → Chefchaouen",
-        "d": "Across the Rif to the blue city for an afternoon of wandering."
+        "d": "Cross into the Rif Mountains for Chefchaouen, with an unhurried afternoon among its blue-washed lanes and the red-walled kasbah."
       },
       {
         "t": "Chefchaouen → Volubilis → Meknes → Rabat",
-        "d": "Roman Volubilis and imperial Meknes en route to the capital."
+        "d": "Descend from the Rif to the Roman ruins of Volubilis, then imperial Meknes and its monumental Bab Mansour gate, before continuing to the capital, Rabat, for the night."
       },
       {
         "t": "Rabat → Casablanca → Marrakech",
-        "d": "The capital and the Hassan II Mosque, then south to Marrakech."
+        "d": "The Hassan Tower and the Kasbah of the Udayas in Rabat, then Casablanca's vast Hassan II Mosque on the ocean, before the drive south to Marrakech."
       },
       {
         "t": "Marrakech → Essaouira → Marrakech",
-        "d": "A day on the Atlantic in Essaouira, or a relaxed day at leisure."
+        "d": "A free day: take the drive out to the Atlantic port of Essaouira for its ramparts and fishing harbour, or stay back in Marrakech at your own pace — this trip has room to breathe either way."
       },
       {
         "t": "Departure",
-        "d": "Free time in Marrakech before your transfer to the airport."
+        "d": "A final free morning in Marrakech — a last coffee by the square, or one more pass through the souks — before your transfer to the airport."
       }
     ]
   },
   {
     "id": "12-casa",
-    "title": "12 Days Tour from Casablanca",
+    "title": "12 Days from Casablanca — The Full National Loop",
     "days": 12,
     "from": "Casablanca",
     "to": "Casablanca",
@@ -1506,7 +1506,7 @@ export const TOURS: Tour[] = [
   },
   {
     "id": "14-casa",
-    "title": "14 Day Private Tour from Casablanca",
+    "title": "14 Days from Casablanca — Two Weeks to See It All",
     "days": 14,
     "from": "Casablanca",
     "to": "Casablanca",
@@ -1676,63 +1676,63 @@ export const TOURS: Tour[] = [
     "itin": [
       {
         "t": "Marrakech city",
-        "d": "A guided day in the Red City — souks, Koutoubia, Bahia Palace and Jemaa el-Fnaa."
+        "d": "A guided day in the Red City — the maze of the souks, the Koutoubia minaret, the carved courtyards of the Bahia Palace and the food stalls of Jemaa el-Fnaa as evening falls."
       },
       {
         "t": "Marrakech → Aït Ben Haddou → Ouarzazate",
-        "d": "Over the High Atlas to the ksar of Aït Ben Haddou and the kasbahs of Ouarzazate."
+        "d": "Climb the Tizi n'Tichka pass over the High Atlas, detour to the hilltop Telouet Kasbah, then explore the earthen ksar of Aït Ben Haddou before settling into Ouarzazate for the night."
       },
       {
         "t": "Ouarzazate → Skoura → Valley of Roses → Dadès",
-        "d": "The Skoura oasis and rose valley, ending in the Dadès Gorge."
+        "d": "Wander the palm groves and kasbahs of the Skoura oasis, follow the Valley of Roses toward Kalaat M'Gouna, and settle into the Dadès Gorge for the night among its folded rock formations."
       },
       {
         "t": "Dadès → Todgha → Merzouga",
-        "d": "Todgha Gorge and a sunset camel trek into the Erg Chebbi dunes."
+        "d": "A morning walk beneath the towering limestone walls of Todgha Gorge, then east via Tinghir and Rissani to Merzouga. As the light turns gold, a camel trek carries you into the Erg Chebbi dunes for dinner and a first night at camp."
       },
       {
         "t": "A full day in the Sahara",
-        "d": "Sunrise, a 4x4 off-road day, Khamlia Gnaoua music and tea with a nomad family; second desert night."
+        "d": "Watch the sunrise over the dunes, then a full day by 4x4 — Khamlia's Gnaoua musicians, tea with a nomad family and off-road tracks across the erg — before a second night at your desert camp."
       },
       {
         "t": "Merzouga → Ziz Valley → Midelt → Fes",
-        "d": "North through the palm-filled Ziz Valley and the Middle Atlas to Fes."
+        "d": "Drive north through the palm-lined Ziz Valley and Midelt into the Middle Atlas cedar forests, where wild Barbary macaques forage by the roadside, arriving in Fes by evening."
       },
       {
         "t": "A full day in Fes",
-        "d": "A guided walk through the medieval medina and its living crafts."
+        "d": "A local guide leads you through the medieval medina — the Chouara tanneries, the Bou Inania madrasa, the Al-Qarawiyyin mosque and university and the working artisan quarters — one of the best-preserved old cities in the world."
       },
       {
         "t": "Fes → Chefchaouen",
-        "d": "Across the Rif to the blue city for the afternoon."
+        "d": "Cross into the Rif Mountains for Chefchaouen, spending the afternoon among its blue-washed lanes and the red-walled kasbah as evening settles in."
       },
       {
         "t": "Chefchaouen → Volubilis → Meknes → Fes/Rabat",
-        "d": "Roman Volubilis and imperial Meknes; overnight toward the capital."
+        "d": "Descend from the Rif to the Roman ruins of Volubilis, still scattered with mosaics, then imperial Meknes and its monumental Bab Mansour gate, continuing on toward the capital for the night."
       },
       {
         "t": "→ Rabat",
-        "d": "The capital's kasbah, mausoleum and seafront."
+        "d": "A morning in Rabat — the Hassan Tower, the Mohammed V Mausoleum and the whitewashed Kasbah of the Udayas above the Atlantic."
       },
       {
         "t": "Rabat → Casablanca",
-        "d": "The Hassan II Mosque and the Atlantic corniche."
+        "d": "South along the coast to Casablanca for the vast Hassan II Mosque, built out over the ocean, and an evening on the Atlantic corniche."
       },
       {
         "t": "Casablanca → El Jadida → Essaouira",
-        "d": "Down the coast to the port city of Essaouira."
+        "d": "Follow the Atlantic coast south through the Portuguese-built ramparts of El Jadida to the port city of Essaouira for the night."
       },
       {
         "t": "Essaouira at leisure",
-        "d": "A slow day among the ramparts, the harbour and the beaches."
+        "d": "A slow day at the coast — the Skala ramparts, the fishing harbour and the long beach south of town — with time to browse the medina's galleries and woodwork stalls."
       },
       {
         "t": "Essaouira → Marrakech",
-        "d": "Inland via the argan groves back to Marrakech."
+        "d": "A relaxed drive inland through argan forest back to Marrakech, arriving in time to settle in before the evening crowds gather at Jemaa el-Fnaa."
       },
       {
         "t": "Departure",
-        "d": "Free time before your airport transfer."
+        "d": "A final free morning in Marrakech before your airport transfer, closing out a fortnight that took in every region of the country."
       }
     ]
   },
@@ -1821,38 +1821,56 @@ export const TOURS: Tour[] = [
 export const DEST: Destination[] = [
   {
     "n": "Marrakech",
-    "d": "The Red City — souks, palaces & Jemaa el-Fnaa",
+    "d": "Maze-like souks, palace courtyards & Jemaa el-Fnaa at dusk",
     "scene": "medina",
     "city": "Marrakech"
   },
   {
     "n": "The Sahara",
-    "d": "Erg Chebbi dunes, camel treks & desert camps",
+    "d": "Camel treks into the Erg Chebbi dunes & nights at a desert camp",
     "scene": "dunes",
     "city": "Marrakech"
   },
   {
     "n": "Fes",
-    "d": "The world's great medieval medina",
+    "d": "The world's great medieval medina, still lived-in and working",
     "scene": "medina",
     "city": "Fes"
   },
   {
     "n": "Chefchaouen",
-    "d": "The blue city in the Rif Mountains",
+    "d": "Cobalt-blue lanes climbing the Rif Mountains",
     "scene": "medina",
     "city": "Tangier"
   },
   {
     "n": "Aït Ben Haddou",
-    "d": "The fortified ksar on the caravan road",
+    "d": "A fortified earthen ksar on the old caravan road",
     "scene": "medina",
     "city": "Marrakech"
   },
   {
     "n": "Essaouira",
-    "d": "Atlantic ramparts, harbour & sea breeze",
+    "d": "Atlantic ramparts, a working fishing harbour & sea air",
     "scene": "coast",
+    "city": "Casablanca"
+  },
+  {
+    "n": "Casablanca",
+    "d": "The Hassan II Mosque on the Atlantic & Morocco's modern economic capital",
+    "scene": "coast",
+    "city": "Casablanca"
+  },
+  {
+    "n": "Tangier",
+    "d": "Where the Atlantic meets the Mediterranean, with Spain visible across the strait",
+    "scene": "coast",
+    "city": "Tangier"
+  },
+  {
+    "n": "Rabat",
+    "d": "Morocco's quieter capital — the Hassan Tower, the Kasbah of the Udayas & the Chellah necropolis",
+    "scene": "medina",
     "city": "Casablanca"
   }
 ];

@@ -16,7 +16,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-line bg-card shadow-[0_18px_40px_-24px_rgba(63,33,9,.45)]"
+      className="group block overflow-hidden rounded-lg border border-line bg-card"
     >
       <div className="relative aspect-[16/9] overflow-hidden">
         <Image
