@@ -6,22 +6,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --sand: #fbf6ec;
-  --sand-2: #f3e9d6;
-  --sand-3: #eadfc7;
+  --sand: #f2e8d5;
+  --sand-2: #e9dcc0;
+  --sand-3: #ddccaa;
   --espresso: #3f2109;
   --espresso-2: #2b1808;
-  --ink: #3a2612;
+  --ink: #2f1e0f;
   --muted: #7a5f42;
-  --terracotta: #a8481a;
-  --terracotta-d: #8a3a13;
-  --clay: #c56a2e;
-  --amber: #e4a23e;
-  --amber-d: #ce8a25;
+  --terracotta: #8f3f1f;
+  --terracotta-d: #742f16;
+  --clay: #b06029;
+  --amber: #cf9433;
+  --amber-d: #b87a22;
   --olive: #4b5130;
   --olive-d: #3c4126;
+  --indigo: #1f3d4f;
+  --indigo-d: #16303e;
+  --indigo-l: #3c6478;
   --line: rgba(63, 33, 9, 0.14);
-  --card: #fffdf8;
+  --card: #fdf9f0;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -69,6 +72,9 @@
   --color-amber-d: var(--amber-d);
   --color-olive: var(--olive);
   --color-olive-d: var(--olive-d);
+  --color-indigo: var(--indigo);
+  --color-indigo-d: var(--indigo-d);
+  --color-indigo-l: var(--indigo-l);
   --color-line: var(--line);
   --color-card: var(--card);
   --font-serif: var(--font-fraunces);

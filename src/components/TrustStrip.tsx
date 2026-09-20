@@ -7,12 +7,19 @@ const ITEMS = [
 
 export default function TrustStrip() {
   return (
-    <div className="border-b border-line bg-sand-2">
-      <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-x-10 gap-y-3 px-[clamp(18px,4vw,40px)] py-4 text-center">
-        {ITEMS.map((item) => (
-          <div key={item.label} className="flex items-baseline gap-2">
-            <span className="font-serif text-xl font-semibold text-terracotta">{item.value}</span>
-            <span className="text-sm text-muted">{item.label}</span>
+    <div className="bg-indigo text-white">
+      <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-y-4 px-[clamp(18px,4vw,40px)] py-6 text-center">
+        {ITEMS.map((item, i) => (
+          <div key={item.label} className="flex items-center">
+            {i > 0 && <span className="mx-6 hidden h-9 w-px bg-white/15 sm:block" />}
+            <div className="flex items-baseline gap-2.5">
+              <span className="font-serif text-2xl font-semibold text-white sm:text-[1.9rem]">
+                {item.value}
+              </span>
+              <span className="max-w-[12ch] text-left text-sm leading-tight text-white/70">
+                {item.label}
+              </span>
+            </div>
           </div>
         ))}
       </div>

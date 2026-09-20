@@ -30,7 +30,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       <div className="p-5">
         <div className="mb-2 flex items-center gap-2 text-xs font-semibold text-muted">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
-          <span>·</span>
+          <span aria-hidden className="inline-block h-3 w-px bg-line" />
           <span>{post.readMins} min read</span>
         </div>
         <h3 className="mb-2 font-serif text-lg font-semibold leading-snug text-espresso group-hover:text-terracotta">

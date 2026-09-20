@@ -51,7 +51,7 @@ export default function Header() {
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M20 6 9 17l-5-5" />
             </svg>
-            33 private itineraries · 100% private departures
+            33 private itineraries, all 100% private departures
           </div>
         </div>
       </div>

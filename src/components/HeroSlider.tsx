@@ -103,7 +103,7 @@ export default function HeroSlider() {
           <span className="h-px w-6 bg-amber" />
         </div>
 
-        <h1 className="max-w-[18ch] font-serif text-[clamp(2rem,4.6vw,3.4rem)] font-semibold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,.5)]">
+        <h1 className="max-w-[16ch] font-serif text-[clamp(2.3rem,5.6vw,4.3rem)] font-bold leading-[1.02] tracking-[-0.01em] text-white [text-shadow:0_2px_24px_rgba(0,0,0,.5)]">
           Morocco, from the Atlas passes to the Sahara dunes.
         </h1>
         <p className="mt-4 max-w-[52ch] text-[.98rem] text-white/85 sm:text-base">

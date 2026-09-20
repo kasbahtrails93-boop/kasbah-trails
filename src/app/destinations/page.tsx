@@ -45,12 +45,6 @@ const PHOTOS: Record<string, { src: string; alt: string }> = {
   },
 };
 
-const SCENE_LABEL: Record<string, string> = {
-  dunes: "Desert",
-  medina: "Medina",
-  coast: "Coast",
-};
-
 const DETAIL: Record<string, string> = {
   Marrakech:
     "The red city's medina is a genuine maze — horse carts, spice stalls and hidden riads behind unmarked doors, opening onto the chaos of Jemaa el-Fnaa at dusk: snake charmers, orange-juice carts and food stalls lit by gas lamps. It's the starting point for most of our routes, and worth two full days on its own before you head anywhere else.",
@@ -117,7 +111,6 @@ export default function DestinationsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-[clamp(24px,4vw,40px)]">
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-amber">Where you&apos;ll go</p>
             <h1 className="max-w-[20ch] font-serif text-[clamp(1.9rem,4vw,3.1rem)] font-semibold tracking-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,.4)]">
               Places worth the drive
             </h1>
@@ -155,9 +148,6 @@ export default function DestinationsPage() {
                   )}
                 </div>
                 <div className={reversed ? "sm:order-1" : ""}>
-                  <p className="mb-2 text-sm font-bold tracking-wide text-terracotta">
-                    {SCENE_LABEL[d.scene]}
-                  </p>
                   <h2 className="font-serif text-[clamp(1.5rem,3vw,2.1rem)] font-semibold text-espresso">
                     {d.n}
                   </h2>

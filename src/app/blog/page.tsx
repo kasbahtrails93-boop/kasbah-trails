@@ -38,7 +38,6 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-[clamp(24px,4vw,40px)]">
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-amber">The Kasbah Trails journal</p>
             <h1 className="max-w-[20ch] font-serif text-[clamp(1.9rem,4vw,3.1rem)] font-semibold tracking-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,.4)]">
               Morocco travel guides &amp; tips
             </h1>

@@ -101,7 +101,8 @@ export default async function BlogPostPage({
             <div className="text-sm">
               <p className="font-semibold text-ink">Written by the Kasbah Trails team</p>
               <p className="text-muted">
-                Published <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readMins} min read
+                A {post.readMins}-minute read, published{" "}
+                <time dateTime={post.date}>{formatDate(post.date)}</time>
               </p>
             </div>
           </div>

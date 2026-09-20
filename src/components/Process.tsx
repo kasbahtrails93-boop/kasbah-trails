@@ -20,17 +20,17 @@ const STEPS = [
 export default function Process() {
   return (
     <section id="how" className="scroll-mt-24 bg-sand-2">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
         <div className="text-center">
-          <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">
-            Simple from the first message
-          </p>
           <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">How planning works</h2>
+          <p className="mx-auto mt-4 max-w-[60ch] text-[1.06rem] text-muted">
+            Simple from the first message — no forms to fill out, no waiting on a call centre.
+          </p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
             <div key={s.title} className="rounded-lg border border-line bg-card p-6">
-              <div className="mb-3 font-serif text-3xl font-semibold text-amber-d">{i + 1}</div>
+              <div className="mb-3 font-serif text-3xl font-semibold text-indigo">{i + 1}</div>
               <h3 className="mb-1.5 font-serif text-lg font-semibold">{s.title}</h3>
               <p className="text-sm text-muted">{s.body}</p>
             </div>

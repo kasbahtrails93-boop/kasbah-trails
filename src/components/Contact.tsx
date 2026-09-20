@@ -22,7 +22,6 @@ export default function Contact() {
       <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">Let&apos;s plan it</p>
             <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Start your Morocco trip</h2>
             <p className="mt-4 max-w-[48ch] text-[1.06rem] text-muted">
               Send your dates, how many days you have, and what you&apos;d love to see. Here&apos;s

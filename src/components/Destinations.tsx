@@ -45,9 +45,8 @@ export default function Destinations() {
 
   return (
     <section id="destinations" className="scroll-mt-24">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
         <div className="text-center">
-          <p className="mb-2.5 text-sm font-bold tracking-wide text-amber-d">Where you&apos;ll go</p>
           <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Places worth the drive</h2>
           <p className="mx-auto mt-4 max-w-[60ch] text-[1.06rem] text-muted">
             The sights that thread through our tours — mix and match them into the trip that&apos;s

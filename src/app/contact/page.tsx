@@ -55,7 +55,6 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/5" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-[1200px] px-[clamp(18px,4vw,40px)] pb-[clamp(24px,4vw,40px)]">
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-amber">Let&apos;s plan it</p>
             <h1 className="max-w-[20ch] font-serif text-[clamp(1.9rem,4vw,3.1rem)] font-semibold tracking-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,.4)]">
               Get in touch
             </h1>
@@ -66,7 +65,6 @@ export default function ContactPage() {
       <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(40px,6vw,64px)]">
         <div className="grid items-start gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">Let&apos;s plan it</p>
             <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Send us your trip details</h2>
             <p className="mt-4 max-w-[48ch] text-[1.06rem] text-muted">
               Fill in as much or as little as you know — we&apos;ll fill in the rest with you on

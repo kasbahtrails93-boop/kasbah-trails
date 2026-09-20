@@ -32,9 +32,8 @@ const FAQS = [
 export default function Faq() {
   return (
     <section id="faq" className="scroll-mt-24">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
         <div className="text-center">
-          <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">Questions</p>
           <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Common questions, answered</h2>
         </div>
         <div className="mx-auto mt-8 max-w-[780px]">

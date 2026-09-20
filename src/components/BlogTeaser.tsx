@@ -6,9 +6,8 @@ export default function BlogTeaser() {
   const latest = BLOG.slice(0, 3);
   return (
     <section className="bg-sand-2">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(28px,4vw,48px)]">
+      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
         <div className="text-center">
-          <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">From the journal</p>
           <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Planning notes worth reading</h2>
           <p className="mx-auto mt-4 max-w-[60ch] text-[1.06rem] text-muted">
             Honest answers to the questions we get asked most, before you even message us.
