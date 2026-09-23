@@ -225,15 +225,15 @@ export default async function TourDetailPage({ params }: { params: Promise<{ id:
                     <span className="text-[0.55rem] font-medium uppercase tracking-[0.18em] text-muted">Day</span>
                     <span className="mt-0.5 font-serif text-[1.3rem] text-terra">{i + 1}</span>
                   </span>
-                  <div className={`pt-2 ${day.place ? "md:grid md:grid-cols-[1fr_150px] md:gap-6" : ""}`}>
+                  <div className={`pt-2 ${day.place ? "md:grid md:grid-cols-[1fr_200px] md:gap-8" : ""}`}>
                     <div>
                       <h3 className="text-[1.35rem] leading-snug">{day.t}</h3>
                       <p className="mt-3 text-[1rem] leading-[1.8]">{day.d}</p>
                     </div>
                     {day.place && (
                       <figure className="mt-5 md:mt-1">
-                        <div className="arch relative aspect-[3/4] w-[130px] overflow-hidden bg-dune md:w-full">
-                          <Image src={day.place.photo.src} alt={day.place.photo.alt} fill sizes="150px" className="object-cover" />
+                        <div className="relative aspect-[4/3] w-[180px] overflow-hidden rounded-[var(--radius-card)] bg-dune shadow-[0_14px_30px_-20px_rgba(43,23,12,.5)] ring-1 ring-sun-d/30 ring-offset-4 ring-offset-paper md:w-full">
+                          <Image src={day.place.photo.src} alt={day.place.photo.alt} fill sizes="200px" className="object-cover" />
                         </div>
                         <figcaption className="mt-2 text-[0.78rem] text-muted">{day.place.name}</figcaption>
                       </figure>

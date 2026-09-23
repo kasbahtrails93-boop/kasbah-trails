@@ -209,11 +209,6 @@
   text-transform: uppercase;
 }
 
-/* Kasbah-doorway arch: round top, square foot. */
-@utility arch {
-  border-radius: 999px 999px 6px 6px;
-}
-
 @layer components {
   /* Squared, tracked buttons. */
   .btn {

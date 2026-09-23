@@ -10,7 +10,6 @@ import BrandLockup from "./BrandLockup";
 const LINKS = [
   { href: "/tours", label: "Tours" },
   { href: "/destinations", label: "Destinations" },
-  { href: "/#experiences", label: "Experiences" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
