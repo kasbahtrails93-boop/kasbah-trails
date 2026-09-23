@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BLOG, getPost, getRelatedPosts } from "@/lib/blog";
@@ -8,6 +7,8 @@ import BlogBlocks from "@/components/BlogBlocks";
 import BlogCard from "@/components/BlogCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TableOfContents from "@/components/TableOfContents";
+import CtaBand from "@/components/CtaBand";
+import { Star } from "@/components/Ornament";
 
 export async function generateStaticParams() {
   return BLOG.map((p) => ({ slug: p.slug }));
@@ -82,68 +83,55 @@ export default async function BlogPostPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <div className="bg-sand-2">
-        <div className="mx-auto max-w-[820px] px-[clamp(18px,4vw,40px)] pb-6 pt-10">
-          <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: post.title }]}
-          />
-        </div>
-        <div className="mx-auto max-w-[820px] px-[clamp(18px,4vw,40px)] pb-10">
-          <h1 className="text-[clamp(1.9rem,4vw,2.9rem)] tracking-tight">{post.title}</h1>
-          <div className="mt-5 flex items-center gap-3">
-            <Image
-              src="/images/brand/kasbah-trails-mark.png"
-              alt="Kasbah Trails"
-              width={160}
-              height={62}
-              className="h-8 w-auto shrink-0"
-            />
-            <div className="text-sm">
-              <p className="font-semibold text-ink">Written by the Kasbah Trails team</p>
+      <header className="bg-sand">
+        <div className="container-site max-w-[52rem] pb-12 pt-10">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Journal", href: "/blog" }, { label: post.title }]} />
+          <p className="mt-9 flex items-center gap-2.5 text-[0.72rem] font-medium uppercase tracking-[0.24em] text-terra">
+            <Star size={9} />
+            Travel guide · {post.readMins} min read
+          </p>
+          <h1 className="mt-4 text-h1">{post.title}</h1>
+          <div className="mt-7 flex items-center gap-3 border-t border-line pt-5">
+            <Image src="/images/brand/kasbah-trails-mark.png" alt="Kasbah Trails" width={1000} height={390} className="h-8 w-auto shrink-0" />
+            <div className="text-[0.9rem] leading-snug">
+              <p className="text-ink">Written by the Kasbah Trails team</p>
               <p className="text-muted">
-                A {post.readMins}-minute read, published{" "}
-                <time dateTime={post.date}>{formatDate(post.date)}</time>
+                Published <time dateTime={post.date}>{formatDate(post.date)}</time>
               </p>
             </div>
           </div>
         </div>
+      </header>
+
+      <div className="container-site -mt-2 pt-10">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-[var(--radius-card)] bg-dune md:aspect-[21/9]">
+          <Image src={photo.src} alt={photo.alt} fill sizes="100vw" preload className="object-cover" />
+        </div>
       </div>
 
-      <div className="relative aspect-[21/9] w-full">
-        <Image src={photo.src} alt={photo.alt} fill sizes="100vw" priority className="object-cover" />
-      </div>
-
-      <div className="mx-auto max-w-[820px] px-[clamp(18px,4vw,40px)] py-[clamp(40px,6vw,64px)]">
-        <p className="mb-6 text-[1.15rem] leading-relaxed text-ink">{post.intro}</p>
+      <div className="container-site max-w-[46rem] py-14">
+        <p className="mb-10 font-serif text-[1.4rem] leading-[1.55] text-ink">{post.intro}</p>
         <TableOfContents blocks={post.blocks} />
         <BlogBlocks blocks={post.blocks} />
+      </div>
 
-        <div className="mt-10 rounded-lg border border-line bg-sand-2 p-6">
-          <p className="text-ink">
-            Ready to see this in an itinerary?{" "}
-            <Link href="/tours" className="font-semibold text-terracotta underline">
-              Browse all 33 private Morocco tours
-            </Link>{" "}
-            or message us directly with your dates on{" "}
-            <Link href="/contact" className="font-semibold text-terracotta underline">
-              WhatsApp
-            </Link>{" "}
-            for a route built around this trip.
-          </p>
-        </div>
-
-        {related.length > 0 && (
-          <div className="mt-14">
-            <h2 className="mb-5 font-serif text-2xl font-semibold text-espresso">Related reading</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {related.length > 0 && (
+        <section className="section-y bg-sand">
+          <div className="container-site">
+            <h2 className="text-h2">Related reading</h2>
+            <div className="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((r) => (
                 <BlogCard key={r.slug} post={r} />
               ))}
             </div>
           </div>
-        )}
-      </div>
+        </section>
+      )}
+
+      <CtaBand
+        title="Ready to see this in an itinerary?"
+        body="Browse all 33 private Morocco journeys, or message us with your dates for a route built around this trip."
+      />
     </article>
   );
 }
-

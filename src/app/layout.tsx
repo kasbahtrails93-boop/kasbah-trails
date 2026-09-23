@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Fraunces, Mulish } from "next/font/google";
+import { Marcellus, Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import BackToTop from "@/components/BackToTop";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "400",
   display: "swap",
 });
 
-const mulish = Mulish({
-  variable: "--font-mulish",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -129,7 +128,7 @@ const faqJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${mulish.variable}`}>
+    <html lang="en" className={`${marcellus.variable} ${jost.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -140,10 +139,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
-      <body className="bg-sand text-ink font-sans antialiased" style={{ fontSize: "17px", lineHeight: 1.65 }}>
+      <body className="bg-paper font-sans text-body antialiased" suppressHydrationWarning>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        >
+          Skip to content
+        </a>
         <Header />
         <a id="top" />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
         <WhatsAppFloat />
         <BackToTop />

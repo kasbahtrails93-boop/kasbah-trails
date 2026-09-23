@@ -4,40 +4,37 @@ import { pickPhoto } from "@/lib/photoPool";
 import type { BlogPost } from "@/lib/blog";
 
 function formatDate(iso: string) {
-  return new Date(iso + "T00:00:00").toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return new Date(iso + "T00:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
 
 export default function BlogCard({ post }: { post: BlogPost }) {
   const photo = pickPhoto(post.scene, post.slug);
   return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="group block overflow-hidden rounded-lg border border-line bg-card"
-    >
-      <div className="relative aspect-[16/9] overflow-hidden">
+    <article className="card card-hover group relative flex flex-col">
+      <div className="relative aspect-[16/10] overflow-hidden bg-dune">
         <Image
           src={photo.src}
           alt={photo.alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="zoom object-cover"
         />
+        <span className="tag absolute left-4 top-4">{post.readMins} min read</span>
       </div>
-      <div className="p-5">
-        <div className="mb-2 flex items-center gap-2 text-xs font-semibold text-muted">
+      <div className="flex flex-1 flex-col p-6">
+        <p className="text-[0.8rem] text-muted">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
-          <span aria-hidden className="inline-block h-3 w-px bg-line" />
-          <span>{post.readMins} min read</span>
-        </div>
-        <h3 className="mb-2 font-serif text-lg font-semibold leading-snug text-espresso group-hover:text-terracotta">
-          {post.title}
+        </p>
+        <h3 className="mt-2 text-[1.35rem] leading-snug">
+          <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0 group-hover:text-terra">
+            {post.title}
+          </Link>
         </h3>
-        <p className="text-sm text-muted">{post.description}</p>
+        <p className="mt-3 line-clamp-2 text-[0.92rem] leading-relaxed text-muted">{post.description}</p>
+        <div className="mt-auto pt-5">
+          <span className="link-arrow">Read the guide</span>
+        </div>
       </div>
-    </Link>
+    </article>
   );
 }

@@ -1,85 +1,44 @@
-import Image from "next/image";
+import Link from "next/link";
 import { DEST } from "@/lib/data";
+import { destPhoto, destSlug, toursVisiting } from "@/lib/destinations";
+import SectionHeading from "./SectionHeading";
+import DestinationPanels, { type Panel } from "./DestinationPanels";
 
-// The homepage teaser deliberately shows a curated 6, not the full catalog —
-// see /destinations for all of them, same pattern as FeaturedTours vs /tours.
-const FEATURED_NAMES = ["Marrakech", "The Sahara", "Fes", "Chefchaouen", "Aït Ben Haddou", "Essaouira"];
-
-const PHOTOS: Record<string, { src: string; alt: string }> = {
-  Marrakech: {
-    src: "/images/destinations/marrakech-jemaa-el-fnaa-sunset.webp",
-    alt: "Jemaa el-Fnaa square and the Koutoubia minaret at sunset, Marrakech, Morocco",
-  },
-  "The Sahara": {
-    src: "/images/destinations/erg-chebbi-merzouga-camel-trek.webp",
-    alt: "Camel trek crossing the Erg Chebbi dunes near Merzouga in the Sahara desert",
-  },
-  Fes: {
-    src: "/images/destinations/fes-medina-chouara-tannery.webp",
-    alt: "The Chouara tannery pits in the Fes medina, Morocco",
-  },
-  Chefchaouen: {
-    src: "/images/destinations/chefchaouen-blue-city-stairway.webp",
-    alt: "A blue-painted stairway lined with plant pots in Chefchaouen, Morocco",
-  },
-  "Aït Ben Haddou": {
-    src: "/images/destinations/ait-ben-haddou-kasbah-unesco-site.webp",
-    alt: "The fortified earthen ksar of Aït Ben Haddou, a UNESCO World Heritage site in Morocco",
-  },
-  Essaouira: {
-    src: "/images/destinations/essaouira-skala-fishing-port.webp",
-    alt: "The Skala fortress and blue fishing boats in the harbour of Essaouira, Morocco",
-  },
-  Casablanca: {
-    src: "/images/pool/casablanca-corniche-lighthouse.webp",
-    alt: "The lighthouse and Atlantic coastline along Casablanca's corniche, Morocco",
-  },
-  Tangier: {
-    src: "/images/hero/tangier-corniche-coast.webp",
-    alt: "An aerial view of Tangier's coastal corniche road curving along the Mediterranean, Morocco",
-  },
-};
+// Homepage destinations: six places, each opening its /destinations entry.
+const ORDER = ["Marrakech", "Aït Ben Haddou", "The Sahara", "Fes", "Chefchaouen", "Essaouira"];
 
 export default function Destinations() {
-  const featured = FEATURED_NAMES.map((n) => DEST.find((d) => d.n === n)!).filter(Boolean);
+  const panels: Panel[] = ORDER.flatMap((name) => {
+    const d = DEST.find((x) => x.n === name);
+    const photo = d && destPhoto(d);
+    if (!d || !photo) return [];
+    return [
+      {
+        name: d.n,
+        line: d.d,
+        href: `/destinations#${destSlug(d.n)}`,
+        hrefLabel: `Discover ${d.n.replace(/^The /, "the ")}`,
+        count: toursVisiting(d.n),
+        photo,
+      },
+    ];
+  });
 
   return (
-    <section id="destinations" className="scroll-mt-24">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
-        <div className="text-center">
-          <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Places worth the drive</h2>
-          <p className="mx-auto mt-4 max-w-[60ch] text-[1.06rem] text-muted">
-            The sights that thread through our tours — mix and match them into the trip that&apos;s
-            yours.
-          </p>
+    <section id="destinations" className="scroll-mt-24 pb-[var(--sy)]">
+      <div className="container-site">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading
+            align="left"
+            eyebrow="Discover"
+            title="Places worth the drive"
+            intro="Most journeys combine three or four of these. Each is worth the days it takes to see properly."
+          />
+          <Link href="/destinations" className="link-arrow">
+            All {DEST.length} destinations
+          </Link>
         </div>
-        <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-3">
-          {featured.map((d) => {
-            const photo = PHOTOS[d.n];
-            return (
-              <a
-                key={d.n}
-                href="#tours"
-                className="group relative block aspect-[4/3] overflow-hidden rounded-lg"
-              >
-                {photo && (
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" />
-                <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                  <b className="font-serif text-lg">{d.n}</b>
-                  <small className="block text-sm text-white/85">{d.d}</small>
-                </div>
-              </a>
-            );
-          })}
-        </div>
+        <DestinationPanels panels={panels} />
       </div>
     </section>
   );

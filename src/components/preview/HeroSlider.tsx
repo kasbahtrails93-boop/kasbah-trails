@@ -89,11 +89,11 @@ export default function PreviewHeroSlider() {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-[clamp(20px,5vw,64px)] text-center">
         <div className="mb-4 flex items-center gap-2.5">
-          <span className="h-px w-6 bg-amber" />
+          <span className="h-px w-6 bg-gold" />
           <span className="text-[13px] font-semibold text-white/75 sm:text-sm">
             Bespoke, private Morocco journeys
           </span>
-          <span className="h-px w-6 bg-amber" />
+          <span className="h-px w-6 bg-gold" />
         </div>
 
         <h1 className="max-w-[18ch] font-serif text-[clamp(2rem,4.6vw,3.4rem)] font-semibold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,.5)]">
@@ -141,7 +141,7 @@ export default function PreviewHeroSlider() {
                   setSeen((prev) => withPreload(prev, i));
                 }}
                 className={`h-1 rounded-full transition-all ${
-                  i === active ? "w-8 bg-amber" : "w-3 bg-white/40 hover:bg-white/70"
+                  i === active ? "w-8 bg-gold" : "w-3 bg-white/40 hover:bg-white/70"
                 }`}
               />
             ))}

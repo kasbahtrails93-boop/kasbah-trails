@@ -17,7 +17,7 @@ export function renderRich(text: string): ReactNode[] {
     const [, label, href] = match;
     if (href.startsWith("/")) {
       parts.push(
-        <Link key={key++} href={href} className="font-semibold text-terracotta underline decoration-terracotta/40 underline-offset-2 hover:decoration-terracotta">
+        <Link key={key++} href={href} className="text-terra underline decoration-terra/40 underline-offset-4 hover:decoration-terra">
           {label}
         </Link>
       );
@@ -28,7 +28,7 @@ export function renderRich(text: string): ReactNode[] {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-terracotta underline decoration-terracotta/40 underline-offset-2 hover:decoration-terracotta"
+          className="text-terra underline decoration-terra/40 underline-offset-4 hover:decoration-terra"
         >
           {label}
         </a>

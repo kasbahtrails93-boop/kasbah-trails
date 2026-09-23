@@ -6,12 +6,12 @@ export default function TableOfContents({ blocks }: { blocks: BlogBlock[] }) {
   if (headings.length < 2) return null;
 
   return (
-    <nav aria-label="Table of contents" className="mb-8 rounded-lg border border-line bg-sand-2 p-5">
-      <p className="mb-3 text-xs font-bold tracking-wide text-muted">In this guide</p>
-      <ol className="space-y-1.5 text-sm">
+    <nav aria-label="Table of contents" className="mb-12 rounded-[var(--radius-card)] border-l-2 border-terra bg-sand p-6">
+      <p className="eyebrow text-terra">In this guide</p>
+      <ol className="mt-4 space-y-2 text-[0.95rem]">
         {headings.map((h) => (
           <li key={h.text}>
-            <a href={`#${slugify(h.text)}`} className="text-terracotta hover:underline">
+            <a href={`#${slugify(h.text)}`} className="text-ink underline-offset-4 hover:text-terra hover:underline">
               {h.text}
             </a>
           </li>

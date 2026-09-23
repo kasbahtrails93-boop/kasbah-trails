@@ -5,26 +5,37 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------
+   Brand tokens, taken from the logo: kasbah rust (#843C18), burnt
+   terracotta (#C06024 / #D8783C), sun gold (#F0A848), dune sand
+   (#B48454) and palm olive (#484824), on a warm paper white.
+   Terracotta is for actions, sun gold for fine detail on dark grounds,
+   palm olive for small tags. Dark sections are kasbah brown, never black.
+   ------------------------------------------------------------------ */
 :root {
-  --sand: #f2e8d5;
-  --sand-2: #e9dcc0;
-  --sand-3: #ddccaa;
-  --espresso: #3f2109;
-  --espresso-2: #2b1808;
-  --ink: #2f1e0f;
-  --muted: #7a5f42;
-  --terracotta: #8f3f1f;
-  --terracotta-d: #742f16;
-  --clay: #b06029;
-  --amber: #cf9433;
-  --amber-d: #b87a22;
-  --olive: #4b5130;
-  --olive-d: #3c4126;
-  --indigo: #1f3d4f;
-  --indigo-d: #16303e;
-  --indigo-l: #3c6478;
-  --line: rgba(63, 33, 9, 0.14);
-  --card: #fdf9f0;
+  --paper: #fbf7f1;
+  --sand: #f4ebdd;
+  --dune: #e8d6bc;
+  --card: #fffdf9;
+  --ink: #2b170c;
+  --body: #56412f;
+  --muted: #7e6856;
+  --kasbah: #3a1c0d;
+  --kasbah-2: #29140a;
+  --rust: #843c18;
+  --terra: #c0602a;
+  --terra-d: #a14e1f;
+  --sun: #f0a848;
+  --sun-d: #b8782e;
+  --palm: #46512d;
+  --line: rgba(43, 23, 12, 0.12);
+  --line-dark: rgba(251, 247, 241, 0.14);
+
+  --header-h: 84px;
+  --sy: clamp(48px, 6vw, 80px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* shadcn/ui scaffold tokens (not used by live pages; kept for the scaffold) */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -58,27 +69,43 @@
 }
 
 @theme inline {
+  --color-paper: var(--paper);
   --color-sand: var(--sand);
-  --color-sand-2: var(--sand-2);
-  --color-sand-3: var(--sand-3);
-  --color-espresso: var(--espresso);
-  --color-espresso-2: var(--espresso-2);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-terracotta: var(--terracotta);
-  --color-terracotta-d: var(--terracotta-d);
-  --color-clay: var(--clay);
-  --color-amber: var(--amber);
-  --color-amber-d: var(--amber-d);
-  --color-olive: var(--olive);
-  --color-olive-d: var(--olive-d);
-  --color-indigo: var(--indigo);
-  --color-indigo-d: var(--indigo-d);
-  --color-indigo-l: var(--indigo-l);
-  --color-line: var(--line);
+  --color-dune: var(--dune);
   --color-card: var(--card);
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-mulish);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-kasbah: var(--kasbah);
+  --color-kasbah-2: var(--kasbah-2);
+  --color-rust: var(--rust);
+  --color-terra: var(--terra);
+  --color-terra-d: var(--terra-d);
+  --color-sun: var(--sun);
+  --color-sun-d: var(--sun-d);
+  --color-palm: var(--palm);
+  --color-line: var(--line);
+  --color-line-dark: var(--line-dark);
+
+  --font-serif: var(--font-marcellus), Georgia, serif;
+  --font-sans: var(--font-jost), system-ui, sans-serif;
+
+  /* type scale (Marcellus is a single-weight display face; size does the work) */
+  --text-display: clamp(2.6rem, 1.6rem + 3.8vw, 4.6rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.01em;
+  --text-h1: clamp(2.2rem, 1.5rem + 2.4vw, 3.4rem);
+  --text-h1--line-height: 1.1;
+  --text-h2: clamp(1.9rem, 1.4rem + 1.6vw, 2.75rem);
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.35rem;
+  --text-h3--line-height: 1.3;
+
+  --radius-card: 8px;
+  --radius-btn: 3px;
+
+  --container-site: 1240px;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -108,56 +135,360 @@
   --color-card-foreground: var(--card-foreground);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --radius-md: calc(var(--radius) * 0.8);
 }
 
+/* Custom base styles MUST stay inside @layer base, or they beat utilities. */
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    font-variant-numeric: lining-nums;
     @apply font-sans;
   }
 
   body {
-    background: var(--sand);
-    color: var(--ink);
+    background: var(--paper);
+    color: var(--body);
+    font-size: 1.03rem;
+    line-height: 1.7;
+    overflow-x: clip;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-fraunces), Georgia, serif;
-    color: var(--espresso);
-    line-height: 1.08;
-    font-weight: 600;
+    font-family: var(--font-marcellus), Georgia, serif;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.15;
+    text-wrap: balance;
   }
+
+  p {
+    text-wrap: pretty;
+  }
+
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--line);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--terra);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--sun);
+    color: var(--kasbah-2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
-/* native details/summary FAQ marker */
-.faq-item summary {
-  list-style: none;
+@utility container-site {
+  width: min(100% - 2 * clamp(20px, 5vw, 48px), var(--container-site));
+  margin-inline: auto;
 }
-.faq-item summary::-webkit-details-marker {
-  display: none;
+
+@utility section-y {
+  padding-block: var(--sy);
 }
-.faq-item summary::after {
-  content: "+";
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--terracotta);
-  flex-shrink: 0;
+
+/* Small tracked uppercase label that names a section. */
+@utility eyebrow {
+  font-family: var(--font-jost), system-ui, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
-.faq-item[open] summary::after {
-  content: "\2013";
+
+/* Kasbah-doorway arch: round top, square foot. */
+@utility arch {
+  border-radius: 999px 999px 6px 6px;
+}
+
+@layer components {
+  /* Squared, tracked buttons. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 1rem 1.8rem;
+    border-radius: var(--radius-btn);
+    border: 1px solid transparent;
+    font-family: var(--font-jost), system-ui, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    transition:
+      background-color 300ms var(--ease),
+      color 300ms var(--ease),
+      border-color 300ms var(--ease);
+  }
+  .btn-sm {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.72rem;
+  }
+  .btn-primary {
+    background: var(--terra);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--terra-d);
+  }
+  .btn-dark {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-dark:hover {
+    background: var(--rust);
+  }
+  .btn-ghost {
+    border-color: color-mix(in srgb, var(--ink) 28%, transparent);
+    color: var(--ink);
+  }
+  .btn-ghost:hover {
+    border-color: var(--terra);
+    color: var(--terra-d);
+  }
+  .btn-light {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .btn-light:hover {
+    background: var(--sun);
+  }
+  .btn-outline-light {
+    border-color: rgba(251, 247, 241, 0.45);
+    color: var(--paper);
+  }
+  .btn-outline-light:hover {
+    border-color: var(--paper);
+    background: rgba(251, 247, 241, 0.1);
+  }
+
+  /* Text link with a travelling arrow. */
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terra);
+    transition: color 250ms var(--ease);
+  }
+  .link-arrow::after {
+    content: "→";
+    font-size: 1rem;
+    letter-spacing: 0;
+    transition: transform 300ms var(--ease);
+  }
+  .link-arrow:hover {
+    color: var(--terra-d);
+  }
+  .link-arrow:hover::after,
+  .group:hover .link-arrow::after {
+    transform: translateX(4px);
+  }
+
+  .card {
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition:
+      box-shadow 400ms var(--ease),
+      transform 400ms var(--ease);
+  }
+  .card-hover:hover {
+    box-shadow: 0 18px 40px -24px rgba(43, 23, 12, 0.35);
+    transform: translateY(-3px);
+  }
+
+  /* Small label on photographs. */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 2px;
+    background: rgba(251, 247, 241, 0.94);
+    color: var(--ink);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .zoom {
+    transition: transform 900ms var(--ease);
+  }
+  .group:hover .zoom {
+    transform: scale(1.05);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: var(--radius-btn);
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 0.85rem 1rem;
+    color: var(--ink);
+    font-size: 0.97rem;
+    transition: border-color 200ms var(--ease);
+  }
+  .field::placeholder {
+    color: color-mix(in srgb, var(--muted) 70%, transparent);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--terra);
+  }
+
+  /* Faint zellige lattice, for dark kasbah-brown sections. */
+  .zellige {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23F0A848' stroke-width='0.7'%3E%3Cpath d='M36 14l6 16 16 6-16 6-6 16-6-16-16-6 16-6z'/%3E%3Cpath d='M20.4 20.4L36 26.9l15.6-6.5-6.5 15.6 6.5 15.6L36 45.1l-15.6 6.5 6.5-15.6z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 72px 72px;
+  }
+
+  /* native details/summary FAQ marker */
+  .faq-item summary {
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::after {
+    content: "+";
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 1.05rem;
+    color: var(--terra);
+    transition: transform 300ms var(--ease);
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+}
+
+/* Gentle fade-up as content scrolls into view. Pure CSS (scroll-driven), so
+   content is always visible where unsupported or with reduced motion. */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes drift {
+  from {
+    transform: translateY(-6%) scale(1.12);
+  }
+  to {
+    transform: translateY(6%) scale(1.12);
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .drift {
+      animation: drift linear both;
+      animation-timeline: view();
+    }
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+/* Homepage hero: staggered entrance for each slide's copy, and the autoplay
+   progress line (the slide advances when this animation ends). */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-in {
+  animation: hero-in 1100ms var(--ease) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-in {
+    animation: none;
+  }
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* On phones, lift the WhatsApp button above a tour page's sticky booking bar. */
+@media (max-width: 1023px) {
+  body:has(.tour-bar) .wa-float {
+    bottom: 88px;
+  }
+  body:has(.tour-bar) {
+    padding-bottom: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zoom,
+  .group:hover .zoom,
+  .card-hover:hover {
+    transition: none;
+    transform: none;
+  }
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -165,8 +496,6 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);

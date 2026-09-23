@@ -43,7 +43,7 @@ const PROCESS_STEPS = [
 export default function PreviewPage() {
   return (
     <div>
-      <div className="border-b border-line bg-amber/10 px-4 py-3 text-center text-sm font-semibold text-espresso">
+      <div className="border-b border-line bg-gold/10 px-4 py-3 text-center text-sm font-semibold text-espresso">
         Style refresh preview — same colors, same fonts, refined buttons &amp; cards. Not live.
       </div>
 
@@ -63,7 +63,7 @@ export default function PreviewPage() {
                 <Link
                   key={t.id}
                   href={`/tours/${t.id}`}
-                  className="group overflow-hidden rounded-lg border border-line bg-card transition-colors hover:border-terracotta"
+                  className="group overflow-hidden rounded-lg border border-line bg-ivory transition-colors hover:border-terracotta"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
@@ -115,7 +115,7 @@ export default function PreviewPage() {
       </section>
 
       {/* PROCESS — border cards instead of shadow cards */}
-      <section className="bg-sand-2 py-[clamp(40px,6vw,64px)]">
+      <section className="bg-cream py-[clamp(40px,6vw,64px)]">
         <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)]">
           <div className="text-center">
             <p className="mb-2.5 text-sm font-bold tracking-wide text-terracotta">Simple from the first message</p>
@@ -123,8 +123,8 @@ export default function PreviewPage() {
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((s, i) => (
-              <div key={s.title} className="rounded-lg border border-line bg-card p-6">
-                <div className="mb-3 font-serif text-3xl font-semibold text-amber-d">{i + 1}</div>
+              <div key={s.title} className="rounded-lg border border-line bg-ivory p-6">
+                <div className="mb-3 font-serif text-3xl font-semibold text-burnt">{i + 1}</div>
                 <h3 className="mb-1.5 font-serif text-lg font-semibold">{s.title}</h3>
                 <p className="text-sm text-muted">{s.body}</p>
               </div>
@@ -134,10 +134,10 @@ export default function PreviewPage() {
       </section>
 
       {/* DESTINATIONS — border cards, rounded-lg photos, no drop shadow */}
-      <section className="bg-sand-2 py-[clamp(40px,6vw,64px)]">
+      <section className="bg-cream py-[clamp(40px,6vw,64px)]">
         <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)]">
           <div className="text-center">
-            <p className="mb-2.5 text-sm font-bold tracking-wide text-amber-d">Where you&apos;ll go</p>
+            <p className="mb-2.5 text-sm font-bold tracking-wide text-burnt">Where you&apos;ll go</p>
             <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Places worth the drive</h2>
           </div>
           <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -164,7 +164,7 @@ export default function PreviewPage() {
       </section>
 
       {/* CONTACT BAND — new button shape, same brand colors */}
-      <section className="bg-espresso-2 py-[clamp(48px,7vw,80px)] text-center text-white">
+      <section className="bg-deep py-[clamp(48px,7vw,80px)] text-center text-white">
         <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)]">
           <h2 className="mx-auto max-w-[20ch] font-serif text-[clamp(1.8rem,3.4vw,2.6rem)] font-semibold text-white">
             Tell us your dates. We&apos;ll handle the rest.
@@ -174,7 +174,7 @@ export default function PreviewPage() {
               href={waLink("Hi Kasbah Trails, I'd like to plan a private Morocco tour.")}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center gap-2 rounded-lg bg-olive px-7 py-3.5 text-[.98rem] font-bold text-white transition-colors hover:bg-olive-d"
+              className="inline-flex items-center gap-2 rounded-lg bg-olive px-7 py-3.5 text-[.98rem] font-bold text-white transition-colors hover:bg-olive"
             >
               Message us on WhatsApp
             </a>

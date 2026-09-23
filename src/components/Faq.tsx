@@ -1,4 +1,7 @@
-const FAQS = [
+import Link from "next/link";
+import SectionHeading from "./SectionHeading";
+
+export const FAQS = [
   {
     q: "Are Kasbah Trails tours private, or do we join a group?",
     a: "Every Kasbah Trails itinerary is 100% private — just you, your travel companions, and a dedicated driver-guide in your own vehicle. There are no strangers added to your group and no fixed departure dates to work around.",
@@ -29,23 +32,37 @@ const FAQS = [
   },
 ];
 
+export function FaqList({ items = FAQS }: { items?: { q: string; a: string }[] }) {
+  return (
+    <div className="border-t border-line">
+      {items.map((f) => (
+        <details key={f.q} className="faq-item border-b border-line">
+          <summary className="flex cursor-pointer items-center justify-between gap-6 py-6 font-serif text-[1.2rem] leading-snug text-ink transition-colors duration-200 hover:text-terra">
+            {f.q}
+          </summary>
+          <p className="max-w-[64ch] pb-7 text-[0.98rem] leading-[1.8]">{f.a}</p>
+        </details>
+      ))}
+    </div>
+  );
+}
+
 export default function Faq() {
   return (
-    <section id="faq" className="scroll-mt-24">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
-        <div className="text-center">
-          <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">Common questions, answered</h2>
+    <section id="faq" className="section-y scroll-mt-24 bg-sand">
+      <div className="container-site grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
+        <div className="lg:sticky lg:top-[calc(var(--header-h)+32px)] lg:self-start">
+          <SectionHeading
+            align="left"
+            eyebrow="Good to know"
+            title="Questions, answered"
+            intro="The things travellers ask before their first message. Something not covered here?"
+          />
+          <Link href="/contact" className="btn btn-dark mt-8">
+            Ask us directly
+          </Link>
         </div>
-        <div className="mx-auto mt-8 max-w-[780px]">
-          {FAQS.map((f) => (
-            <details key={f.q} className="faq-item border-b border-line">
-              <summary className="flex cursor-pointer items-center justify-between gap-4 py-4 font-serif text-[1.05rem] font-semibold text-espresso">
-                {f.q}
-              </summary>
-              <p className="max-w-[64ch] pb-5 text-muted">{f.a}</p>
-            </details>
-          ))}
-        </div>
+        <FaqList />
       </div>
     </section>
   );

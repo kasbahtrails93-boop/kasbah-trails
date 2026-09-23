@@ -1,4 +1,6 @@
-const STEPS = [
+import SectionHeading from "./SectionHeading";
+
+export const STEPS = [
   {
     title: "Tell us your dates",
     body: "Message us with when you're coming, how long you have and what you'd love to see — even if all you've got is a rough shape and a handful of names you've read about.",
@@ -17,33 +19,24 @@ const STEPS = [
   },
 ];
 
+// How planning works: four numbered stops joined by a line, like a route.
 export default function Process() {
   return (
-    <section id="how" className="scroll-mt-24 bg-sand-2">
-      <div className="mx-auto max-w-[1200px] px-[clamp(18px,4vw,40px)] py-[clamp(44px,7vw,80px)]">
-        <div className="text-center">
-          <h2 className="text-[clamp(1.7rem,3.6vw,2.9rem)] tracking-tight">How planning works</h2>
-          <p className="mx-auto mt-4 max-w-[60ch] text-[1.06rem] text-muted">
-            Simple from the first message — no forms to fill out, no waiting on a call centre.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <section id="how" className="section-y scroll-mt-24">
+      <div className="container-site">
+        <SectionHeading eyebrow="How it works" title="From first message to first morning" />
+        <ol className="relative mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <span aria-hidden className="absolute left-[12.5%] right-[12.5%] top-7 hidden h-px border-t border-dashed border-sun-d/60 lg:block" />
           {STEPS.map((s, i) => (
-            <div key={s.title} className="rounded-lg border border-line bg-card p-6">
-              <div className="mb-3 font-serif text-3xl font-semibold text-indigo">{i + 1}</div>
-              <h3 className="mb-1.5 font-serif text-lg font-semibold">{s.title}</h3>
-              <p className="text-sm text-muted">{s.body}</p>
-            </div>
+            <li key={s.title} className="relative text-center">
+              <span className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-terra font-serif text-[1.35rem] text-paper ring-8 ring-paper">
+                {i + 1}
+              </span>
+              <h3 className="mt-6 text-[1.35rem]">{s.title}</h3>
+              <p className="mx-auto mt-3 max-w-[32ch] text-[0.93rem] leading-relaxed">{s.body}</p>
+            </li>
           ))}
-        </div>
-        <div className="mt-9 text-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-terracotta px-6 py-3.5 text-[.98rem] font-bold text-white hover:bg-terracotta-d"
-          >
-            Start planning
-          </a>
-        </div>
+        </ol>
       </div>
     </section>
   );

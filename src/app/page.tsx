@@ -1,25 +1,29 @@
-import HeroSlider from "@/components/HeroSlider";
-import TrustStrip from "@/components/TrustStrip";
-import FeaturedTours from "@/components/FeaturedTours";
-import Process from "@/components/Process";
-import Why from "@/components/Why";
+import LuxuryHero from "@/components/home/LuxuryHero";
+import Intro from "@/components/home/Intro";
+import Journeys from "@/components/home/Journeys";
+import TravelYourWay from "@/components/home/TravelYourWay";
+import Experiences from "@/components/home/Experiences";
+import Values from "@/components/home/Values";
 import Destinations from "@/components/Destinations";
-import BlogTeaser from "@/components/BlogTeaser";
-import Reviews from "@/components/Reviews";
-import Faq from "@/components/Faq";
+import Steps from "@/components/home/Steps";
+import Voices from "@/components/home/Voices";
+import Guides from "@/components/home/Guides";
+import Questions from "@/components/home/Questions";
 
 export default function Home() {
   return (
     <>
-      <HeroSlider />
-      <TrustStrip />
-      <Why />
-      <FeaturedTours />
-      <Process />
+      <LuxuryHero />
+      <Intro />
+      <Journeys />
+      <TravelYourWay />
+      <Experiences />
+      <Values />
       <Destinations />
-      <Reviews />
-      <BlogTeaser />
-      <Faq />
+      <Steps />
+      <Voices />
+      <Guides />
+      <Questions />
     </>
   );
 }

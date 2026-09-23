@@ -82,3 +82,11 @@ export function pickPhoto(scene: "dunes" | "medina" | "coast", seed: string): Ph
   const pool = POOLS[scene];
   return pool[hashStr(seed) % pool.length];
 }
+
+// The whole themed pool, rotated so it starts at the photo pickPhoto would
+// choose for this seed. Used where a page needs several distinct photos.
+export function scenePhotos(scene: "dunes" | "medina" | "coast", seed: string): Photo[] {
+  const pool = POOLS[scene];
+  const start = hashStr(seed) % pool.length;
+  return [...pool.slice(start), ...pool.slice(0, start)];
+}
