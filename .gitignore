@@ -43,3 +43,5 @@ next-env.d.ts
 # raw source image dump (400+ unsorted stock/theme files) -- only the curated,
 # renamed subset in /public/images is actually used by the site
 /images/
+
+.vercel
