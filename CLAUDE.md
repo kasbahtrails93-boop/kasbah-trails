@@ -13,7 +13,7 @@ Kasbah Trails is the marketing site for a boutique private Morocco tours busines
 - `npm run lint` — ESLint (flat config)
 - `npm start` — serve the production build
 
-There is no test suite and no separate `typecheck` script: `npm run lint` and `npm run build` (which type-checks) are the only automated checks. `sharp` is a dev dependency only so `next/image` can optimise the photos; nothing in `src` imports it.
+There is no test suite and no separate `typecheck` script: `npm run lint` and `npm run build` (which type-checks) are the only automated checks. If a test runner is ever added, document its run-all and run-single-test commands here. `sharp` is a dev dependency only so `next/image` can optimise the photos; nothing in `src` imports it.
 
 ## Architecture
 
@@ -59,8 +59,11 @@ There is no test suite and no separate `typecheck` script: `npm run lint` and `n
 
 Placeholders that must be replaced with real data before the site goes live:
 
-- `CONTACT.phoneDisplay`, `CONTACT.phoneTel` and `CONTACT.wa` in `src/lib/data.ts` — the real business phone/WhatsApp number (every CTA goes through `waLink`, so this is the only place to change).
 - `REVS` in `src/lib/data.ts` — placeholder reviews, flagged as such in the rendered page, until replaced with real, sourced ones.
+
+## Next.js version
+
+The block below is managed by `next dev` (between the `BEGIN`/`END` markers) — edit around it, not inside it.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

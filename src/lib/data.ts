@@ -34,10 +34,10 @@ export interface Review {
 }
 
 export const CONTACT = {
-  "phoneDisplay": "+212 6XX-XX XX XX",
-  "phoneTel": "+2126XXXXXXXX",
-  "wa": "2126XXXXXXXX",
-  "email": "hello@kasbahtrails.com"
+  "phoneDisplay": "+212 660 090 990",
+  "phoneTel": "+212660090990",
+  "wa": "212660090990",
+  "email": "kasbahtrails93@gmail.com"
 };
 
 export const INCLUDED: string[] = [
